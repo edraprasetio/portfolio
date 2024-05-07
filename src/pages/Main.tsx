@@ -5,7 +5,7 @@ import { Practice } from './Practice'
 const Main = () => (
     <Routes>
         <Route
-            path='/home'
+            path='/'
             element={
                 <>
                     <Home />
@@ -13,7 +13,7 @@ const Main = () => (
             }
         ></Route>
         <Route
-            path='/'
+            path='/home'
             element={
                 <>
                     <Practice />

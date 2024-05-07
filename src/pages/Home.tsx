@@ -1,9 +1,11 @@
+import { NavBar } from '../components/atoms/header'
 import { HomeBackground } from '../components/home/background'
 
 export const Home = () => {
     return (
         <div>
-            <HomeBackground>greenspace</HomeBackground>
+            <NavBar />
+            <HomeBackground>My own website</HomeBackground>
         </div>
     )
 }
