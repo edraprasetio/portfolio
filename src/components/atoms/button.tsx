@@ -1,29 +1,25 @@
 import styled from '@emotion/styled'
 
-export const BigBlackButton = styled.button`
-    width: 498px;
-    padding: 12px 24px;
-    border: 2px;
-    background-color: #000000;
-    border-radius: 8px;
+export const WhiteButton = styled.button`
+    padding: 0px 24px;
+    border: 2px solid rgba(0, 0, 0, 0);
+    border-radius: 36px;
+    background-color: unset;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
-    color: #ffffff;
+    font-size: 14px;
+    font-weight: 550;
+    text-transform: uppercase;
+    color: black;
     line-height: 29.26px;
     letter-spacing: 10%;
+    transition: border-color 0.3s ease;
     &:hover {
-        background-color: #374092;
+        border-color: black;
     }
-`
-
-export const MediumBlackButton = styled(BigBlackButton)`
-    width: unset;
-    height: 36px;
-    padding: 0px 24px;
-    border-radius: 16px;
-    font-family: Monsterrat-Medium;
-    font-size: 18px;
-    color: #ffffff;
+    &:active {
+        color: white;
+        background-color: black;
+    }
 `

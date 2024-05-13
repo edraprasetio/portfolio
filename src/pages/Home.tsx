@@ -5,7 +5,7 @@ export const Home = () => {
     return (
         <div>
             <NavBar />
-            <HomeBackground>My own website</HomeBackground>
+            <HomeBackground>My own website, or is it?</HomeBackground>
         </div>
     )
 }

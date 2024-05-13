@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import { WhiteButton } from './button'
 
 // Container that makes all of it's contents stick to the top of the viewport
 const StickyContainer = styled.div`
@@ -15,7 +16,7 @@ const NavWrapper = styled.nav`
     align-items: center;
     justify-content: space-between;
     background-color: white;
-    padding: 32px 24px;
+    padding: 16px 24px;
     position: sticky;
     top: 0;
     z-index: 10;
@@ -26,10 +27,22 @@ const NavWrapper = styled.nav`
         padding: 32px 12px;
     }
 `
+
+const LinkWrapper = styled.div`
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+`
 export function NavBar() {
     return (
         <StickyContainer>
-            <NavWrapper></NavWrapper>
+            <NavWrapper>
+                <LinkWrapper>
+                    <WhiteButton>About</WhiteButton>
+                    <WhiteButton>About</WhiteButton>
+                    <WhiteButton>About</WhiteButton>
+                </LinkWrapper>
+            </NavWrapper>
         </StickyContainer>
     )
 }

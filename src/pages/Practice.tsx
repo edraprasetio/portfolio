@@ -1,4 +1,4 @@
-import { MediumBlackButton } from '../components/atoms/button'
+import { WhiteButton } from '../components/atoms/button'
 import { HomeBackground } from '../components/home/background'
 
 export const Practice = () => {
@@ -6,7 +6,7 @@ export const Practice = () => {
         <div>
             <HomeBackground>
                 practice
-                <MediumBlackButton>Hello</MediumBlackButton>
+                <WhiteButton>Button</WhiteButton>
             </HomeBackground>
         </div>
     )
