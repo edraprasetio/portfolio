@@ -10,6 +10,9 @@ export const defaultTheme: Theme = {
         blue: {
             1: '#4D7CF6',
         },
-        white: '#ffffff',
+        white: {
+            1: '#ffffff',
+            2: '#f3f3f3',
+        },
     },
 }

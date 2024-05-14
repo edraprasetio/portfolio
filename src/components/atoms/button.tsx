@@ -11,15 +11,15 @@ export const WhiteButton = styled.button`
     font-size: 14px;
     font-weight: 550;
     text-transform: uppercase;
-    color: black;
+    color: ${(props) => props.theme.primaryColor.black[1]};
     line-height: 29.26px;
     letter-spacing: 10%;
     transition: border-color 0.3s ease;
     &:hover {
-        border-color: black;
+        border-color: ${(props) => props.theme.primaryColor.black[1]};
     }
     &:active {
         color: white;
-        background-color: black;
+        background-color: ${(props) => props.theme.primaryColor.black[1]};
     }
 `
