@@ -4,7 +4,7 @@ export const WhiteButton = styled.button`
     padding: 0px 24px;
     border: 2px solid rgba(0, 0, 0, 0);
     border-radius: 36px;
-    background-color: unset;
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;

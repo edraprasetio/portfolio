@@ -21,13 +21,5 @@ export const PlainLink = styled(Link)`
 
 export const HeaderLink = styled(Link)`
     text-transform: uppercase;
-    color: #000000;
     text-decoration: none;
-    &:hover {
-        padding-top: 2px;
-        color: #5177b8;
-        text-decoration: none;
-        border-bottom: 2px solid #5177b8;
-        border-radius: 1px;
-    }
 `
