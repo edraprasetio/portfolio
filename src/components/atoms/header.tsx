@@ -16,7 +16,7 @@ const NavWrapper = styled.nav`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #f3f3f3;
+    background-color: transparent;
     padding: 16px 256px;
     position: sticky;
     top: 0;

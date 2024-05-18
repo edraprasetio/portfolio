@@ -1,9 +1,12 @@
-import { HeroBackground } from '../components/hero/background'
+import { Background } from '../components/hero/background'
+import CheckBlue from '../assets/icons/checkRing_blue.svg'
 
 export function Hero() {
     return (
         <section id='hero'>
-            <HeroBackground>This is the hero page</HeroBackground>
+            <Background>
+                This is the hero page <img src={CheckBlue} alt='logo' />
+            </Background>
         </section>
     )
 }
