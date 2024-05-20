@@ -1,5 +1,5 @@
-import { Background } from '../components/hero/background'
 import CheckBlue from '../assets/icons/checkRing_blue.svg'
+import { Background } from '../components/hero'
 
 export function Hero() {
     return (
