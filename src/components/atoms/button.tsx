@@ -8,7 +8,8 @@ export const WhiteButton = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 14px;
+    font-family: PlusJakartaSans-SemiBold;
+    font-size: 16px;
     font-weight: 550;
     text-transform: uppercase;
     color: ${(props) => props.theme.primaryColor.black[1]};
