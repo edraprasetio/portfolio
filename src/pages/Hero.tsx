@@ -1,6 +1,8 @@
 import CheckBlack from '../assets/icons/checkRing_black.svg'
-import { Background, CheckContentHeader, CheckMainHeader, HeroMainHeader, HeroNameHeader, ImageWrapper } from '../components/hero'
+import { Background, CheckContentHeader, CheckMainHeader, HeroMainHeader, HeroNameHeader, HeroSocials, HeroSocialsWrapper, ImageContainer, ImageWrapper } from '../components/hero'
 import EdraImg from '../assets/images/edra_square.png'
+import GitHubBlack from '../assets/icons/github_black.svg'
+import LinkedInBlack from '../assets/icons/linkedIn_black.svg'
 import { H1, H3 } from '../styles/typography'
 import { BlueButton } from '../components/atoms/button'
 import { scrollToSection } from '../utils'
@@ -38,7 +40,13 @@ export function Hero() {
                     </BlueButton>
                 </HeroMainHeader>
 
-                <ImageWrapper src={EdraImg} />
+                <ImageContainer>
+                    <ImageWrapper src={EdraImg} />
+                    <HeroSocialsWrapper>
+                        <HeroSocials src={GitHubBlack} />
+                        <HeroSocials src={LinkedInBlack} />
+                    </HeroSocialsWrapper>
+                </ImageContainer>
             </Background>
         </section>
     )

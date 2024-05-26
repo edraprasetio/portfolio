@@ -12,12 +12,6 @@ export const Background = styled.div`
     align-items: center;
 `
 
-export const ImageWrapper = styled.img`
-    width: 320px;
-    height: 320px;
-    border-radius: 50%;
-`
-
 const HeroHeader = styled.div`
     display: flex;
     flex-direction: column;
@@ -42,4 +36,27 @@ export const CheckMainHeader = styled.div`
 export const CheckContentHeader = styled(CheckMainHeader)`
     font-weight: 700;
     gap: 8px;
+`
+
+export const ImageContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+`
+
+export const ImageWrapper = styled.img`
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+`
+
+export const HeroSocialsWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+`
+
+export const HeroSocials = styled.img`
+    width: 32px;
+    height: 32px;
 `
