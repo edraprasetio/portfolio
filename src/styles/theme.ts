@@ -9,6 +9,10 @@ export const defaultTheme: Theme = {
         },
         blue: {
             1: '#4D7CF6',
+            2: '#6590FF',
+        },
+        grey: {
+            1: '#666464',
         },
         white: {
             1: '#FFFFFF',

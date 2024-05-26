@@ -7,7 +7,7 @@ import { Skills } from './Skills'
 
 export const Home = () => {
     return (
-        <div>
+        <div style={{ backgroundColor: '#F3F3F3' }}>
             <NavBar />
             <Hero />
             <About />

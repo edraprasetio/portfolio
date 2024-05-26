@@ -2,6 +2,8 @@ import styled from '@emotion/styled'
 import { WhiteButton } from './button'
 import { HeaderLink } from './link'
 import { useEffect, useState } from 'react'
+import { H1, H2 } from '../../styles/typography'
+import { scrollToSection } from '../../utils'
 
 // Container that makes all of it's contents stick to the top of the viewport
 const StickyContainer = styled.div`
@@ -48,6 +50,10 @@ const LinkWrapper = styled.div`
     gap: 16px;
 `
 
+const LogoWrapper = styled.div`
+    color: ${(props) => props.theme.primaryColor.black[1]};
+`
+
 export function NavBar() {
     const [hasShadow, setHasShadow] = useState(false)
 
@@ -68,38 +74,37 @@ export function NavBar() {
         }
     }, [])
 
-    const scrollToSection = (id: string) => {
-        if (id === 'home') {
-            window.scrollTo({ top: 0, behavior: 'smooth' })
-        } else {
-            const section = document.getElementById(id)
-            if (section) {
-                section.scrollIntoView({ behavior: 'smooth' })
-            }
-        }
-    }
-
     return (
         <StickyContainer>
             <NavWrapper className={hasShadow ? 'displayShadow' : ''}>
                 <HeaderLink to='/' onClick={() => scrollToSection('hero')}>
-                    <div>Logo</div>
+                    <LogoWrapper>
+                        <H2>Edra</H2>
+                    </LogoWrapper>
                 </HeaderLink>
                 <LinkWrapper>
                     <HeaderLink to='#about' onClick={() => scrollToSection('about')}>
-                        <WhiteButton>About</WhiteButton>
+                        <WhiteButton>
+                            <H1>About</H1>
+                        </WhiteButton>
                     </HeaderLink>
 
                     <HeaderLink to='#skills' onClick={() => scrollToSection('skills')}>
-                        <WhiteButton>Skills</WhiteButton>
+                        <WhiteButton>
+                            <H1>Skills</H1>
+                        </WhiteButton>
                     </HeaderLink>
 
                     <HeaderLink to='#experience' onClick={() => scrollToSection('experience')}>
-                        <WhiteButton>Experience</WhiteButton>
+                        <WhiteButton>
+                            <H1>Experience</H1>
+                        </WhiteButton>
                     </HeaderLink>
 
                     <HeaderLink to='#contact' onClick={() => scrollToSection('contact')}>
-                        <WhiteButton>contact</WhiteButton>
+                        <WhiteButton>
+                            <H1>Contact</H1>
+                        </WhiteButton>
                     </HeaderLink>
                 </LinkWrapper>
             </NavWrapper>
