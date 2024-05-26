@@ -20,3 +20,11 @@ export const H3 = styled.div`
     font-weight: 500;
     letter-spacing: 1px;
 `
+
+export const H4 = styled.div`
+    font-family: PlusJakartaSans-Regular;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.6;
+`

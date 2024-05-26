@@ -10,7 +10,7 @@ const BaseButton = styled.button`
     transition: border-color 0.3s ease;
 `
 
-export const WhiteButton = styled(BaseButton)`
+export const ClearButton = styled(BaseButton)`
     border: 2px solid rgba(0, 0, 0, 0);
     background-color: transparent;
     color: ${(props) => props.theme.primaryColor.black[1]};
@@ -37,5 +37,22 @@ export const BlueButton = styled(BaseButton)`
         background-color: ${(props) => props.theme.primaryColor.white[1]};
         border: 2px solid ${(props) => props.theme.primaryColor.blue[1]};
         color: ${(props) => props.theme.primaryColor.blue[1]};
+    }
+`
+
+export const WhiteButton = styled(BaseButton)`
+    width: 240px;
+    padding: 4px 24px;
+    border: 2px solid ${(props) => props.theme.primaryColor.white[1]};
+    background-color: ${(props) => props.theme.primaryColor.white[1]};
+    color: ${(props) => props.theme.primaryColor.black[1]};
+    &:hover {
+        background-color: ${(props) => props.theme.primaryColor.white[3]};
+        border: 2px solid ${(props) => props.theme.primaryColor.white[3]};
+    }
+    &:active {
+        background-color: ${(props) => props.theme.primaryColor.black[1]};
+        border: 2px solid ${(props) => props.theme.primaryColor.white[1]};
+        color: ${(props) => props.theme.primaryColor.white[1]};
     }
 `

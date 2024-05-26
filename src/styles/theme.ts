@@ -5,7 +5,7 @@ import { Theme } from '@emotion/react'
 export const defaultTheme: Theme = {
     primaryColor: {
         black: {
-            1: '#404040',
+            1: '#35363D',
         },
         blue: {
             1: '#4D7CF6',
@@ -17,6 +17,7 @@ export const defaultTheme: Theme = {
         white: {
             1: '#FFFFFF',
             2: '#F3F3F3',
+            3: '#DFDFDF',
         },
     },
 }

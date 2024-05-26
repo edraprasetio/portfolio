@@ -6,6 +6,7 @@ import LinkedInBlack from '../assets/icons/linkedIn_black.svg'
 import { H1, H3 } from '../styles/typography'
 import { BlueButton } from '../components/atoms/button'
 import { scrollToSection } from '../utils'
+import { SimpleLink } from '../components/atoms/link'
 
 export function Hero() {
     return (
@@ -21,7 +22,7 @@ export function Hero() {
                         <H3>
                             A <span style={{ color: '#4D7CF6' }}>WEB DEVELOPER</span>
                         </H3>
-                        <H3>BASED IN BRITISH COLUMBIA</H3>
+                        <H3>BASED IN VICTORIA, BC</H3>
                     </HeroNameHeader>
 
                     <CheckMainHeader>
@@ -43,8 +44,12 @@ export function Hero() {
                 <ImageContainer>
                     <ImageWrapper src={EdraImg} />
                     <HeroSocialsWrapper>
-                        <HeroSocials src={GitHubBlack} />
-                        <HeroSocials src={LinkedInBlack} />
+                        <SimpleLink to='https://github.com/edraprasetio' target='_blank' rel='noopener noreferrer'>
+                            <HeroSocials src={GitHubBlack} />
+                        </SimpleLink>
+                        <SimpleLink to='https://www.linkedin.com/in/edra-prasetio-aa22721b1/' target='_blank' rel='noopener noreferrer'>
+                            <HeroSocials src={LinkedInBlack} />
+                        </SimpleLink>
                     </HeroSocialsWrapper>
                 </ImageContainer>
             </Background>

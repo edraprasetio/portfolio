@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { WhiteButton } from './button'
+import { ClearButton } from './button'
 import { HeaderLink } from './link'
 import { useEffect, useState } from 'react'
 import { H1, H2 } from '../../styles/typography'
@@ -84,27 +84,27 @@ export function NavBar() {
                 </HeaderLink>
                 <LinkWrapper>
                     <HeaderLink to='#about' onClick={() => scrollToSection('about')}>
-                        <WhiteButton>
+                        <ClearButton>
                             <H1>About</H1>
-                        </WhiteButton>
+                        </ClearButton>
                     </HeaderLink>
 
                     <HeaderLink to='#skills' onClick={() => scrollToSection('skills')}>
-                        <WhiteButton>
+                        <ClearButton>
                             <H1>Skills</H1>
-                        </WhiteButton>
+                        </ClearButton>
                     </HeaderLink>
 
                     <HeaderLink to='#experience' onClick={() => scrollToSection('experience')}>
-                        <WhiteButton>
+                        <ClearButton>
                             <H1>Experience</H1>
-                        </WhiteButton>
+                        </ClearButton>
                     </HeaderLink>
 
                     <HeaderLink to='#contact' onClick={() => scrollToSection('contact')}>
-                        <WhiteButton>
+                        <ClearButton>
                             <H1>Contact</H1>
-                        </WhiteButton>
+                        </ClearButton>
                     </HeaderLink>
                 </LinkWrapper>
             </NavWrapper>

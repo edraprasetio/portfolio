@@ -20,3 +20,9 @@ code {
     src: local('PlusJakartaSans-SemiBold'), url('./assets/fonts/PlusJakartaSans-SemiBold.ttf') format('truetype');
     font-weight: normal;
 }
+
+@font-face {
+    font-family: 'PlusJakartaSans-Bold';
+    src: local('PlusJakartaSans-Bold'), url('./assets/fonts/PlusJakartaSans-Bold.ttf') format('truetype');
+    font-weight: normal;
+}
