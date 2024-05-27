@@ -6,11 +6,11 @@ export const Background = styled.div`
     color: ${(props) => props.theme.primaryColor.white[1]};
     display: flex;
     flex-direction: row;
-    gap: 16px;
+    gap: 32px;
     padding-top: 96px;
     padding-bottom: 128px;
     justify-content: center;
-    align-items: center;
+    align-items: start;
 `
 export const MainWrapper = styled.div`
     display: flex;
@@ -20,7 +20,7 @@ export const MainWrapper = styled.div`
 export const ContentWrapper = styled.div`
     display: flex;
     flex-direction: row;
-    gap: 32px;
+    gap: 40px;
 `
 
 export const LeftContainer = styled.div`
@@ -31,8 +31,10 @@ export const LeftContainer = styled.div`
 `
 
 export const HeaderWrapper = styled.div`
+    color: ${(props) => props.theme.primaryColor.white[1]};
     display: flex;
     gap: 8px;
+    margin-bottom: 8px;
 `
 
 export const RightContainer = styled(LeftContainer)`
@@ -51,4 +53,9 @@ export const AboutSocials = styled.img`
     height: 32px;
 `
 
-export const EducationWrapper = styled.div``
+export const EducationContent = styled.div`
+    color: ${(props) => props.theme.primaryColor.white[3]};
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+`
