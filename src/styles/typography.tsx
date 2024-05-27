@@ -28,3 +28,11 @@ export const H4 = styled.div`
     letter-spacing: 1px;
     line-height: 1.6;
 `
+
+export const H5 = styled.div`
+    font-family: PlusJakartaSans-Bold;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.6;
+`

@@ -18,6 +18,7 @@ import mysql from '../assets/icons/skills/mysql-icon.svg'
 import nodeJS from '../assets/icons/skills/nodejs-1.svg'
 import postgress from '../assets/icons/skills/postgresql.svg'
 import python from '../assets/icons/skills/python-5.svg'
+import r from '../assets/icons/skills/r-lang.svg'
 import react from '../assets/icons/skills/react-2.svg'
 import typeScript from '../assets/icons/skills/typescript.svg'
 import wordPress from '../assets/icons/skills/wordpress-icon.svg'
@@ -40,9 +41,10 @@ export function Skills() {
         { id: 14, name: 'Node.js', category: 'Development Tools', yearsOfExperience: 2, imageUrl: nodeJS },
         { id: 15, name: 'PostgreSQL', category: 'Databases', yearsOfExperience: 3, imageUrl: postgress },
         { id: 16, name: 'Python', category: 'Programming Languages', yearsOfExperience: 5, imageUrl: python },
-        { id: 17, name: 'React', category: 'Development Tools', yearsOfExperience: 2, imageUrl: react },
-        { id: 18, name: 'TypeScript', category: 'Programming Languages', yearsOfExperience: 2, imageUrl: typeScript },
-        { id: 19, name: 'WordPress', category: 'Development Tools', yearsOfExperience: 0.5, imageUrl: wordPress },
+        { id: 17, name: 'R', category: 'Programming Languages', yearsOfExperience: 2, imageUrl: r },
+        { id: 18, name: 'React', category: 'Development Tools', yearsOfExperience: 2, imageUrl: react },
+        { id: 19, name: 'TypeScript', category: 'Programming Languages', yearsOfExperience: 2, imageUrl: typeScript },
+        { id: 20, name: 'WordPress', category: 'Development Tools', yearsOfExperience: 0.5, imageUrl: wordPress },
     ]
 
     return (

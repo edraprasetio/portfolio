@@ -1,3 +1,4 @@
+import { Footer } from '../components/atoms/footer'
 import { NavBar } from '../components/atoms/header'
 import { About } from './About'
 import { Contact } from './Contact'
@@ -14,6 +15,7 @@ export const Home = () => {
             <Skills />
             <Experience />
             <Contact />
+            <Footer />
         </div>
     )
 }
