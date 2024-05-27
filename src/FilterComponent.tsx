@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styled from '@emotion/styled'
 import { keyframes } from '@emotion/react'
-import { H1 } from './styles/typography'
+import { H1, H4 } from './styles/typography'
 
 interface Item {
     id: number
@@ -17,7 +17,7 @@ interface FilterComponentProps {
 
 const categories = ['All', 'Programming Languages', 'Development Tools', 'Databases']
 
-const FilterComponent: React.FC<FilterComponentProps> = ({ items }) => {
+export const FilterComponent: React.FC<FilterComponentProps> = ({ items }) => {
     const [selectedCategory, setSelectedCategory] = useState<string>('All')
     const [displayedItems, setDisplayedItems] = useState<Item[]>(items)
     const [itemsToRemove, setItemsToRemove] = useState<Set<number>>(new Set())
@@ -55,8 +55,8 @@ const FilterComponent: React.FC<FilterComponentProps> = ({ items }) => {
                     <Item key={item.id} className={itemsToRemove.has(item.id) ? 'fade-out' : 'fade-in'}>
                         <ItemImage src={item.imageUrl} alt={item.name} />
                         <ItemInfo>
-                            <ItemName>{item.name}</ItemName>
-                            <Experience>{item.yearsOfExperience}+ Years of Experience</Experience>
+                            <H1 style={{ fontWeight: 'bold' }}>{item.name}</H1>
+                            <H4 style={{ color: '#666464' }}>{item.yearsOfExperience}+ Years of Experience</H4>
                         </ItemInfo>
                     </Item>
                 ))}
@@ -65,11 +65,11 @@ const FilterComponent: React.FC<FilterComponentProps> = ({ items }) => {
     )
 }
 
-// Styled Components using Emotion
 const Container = styled.div`
     padding: 20px;
     margin: 0 auto;
     display: flex;
+    gap: 8px;
     flex-direction: column;
     align-items: center;
 `
@@ -126,7 +126,8 @@ const fadeOut = keyframes`
 const ItemList = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    row-gap: 2px;
+    column-gap: 16px;
     justify-content: center;
     width: 100%;
 `
@@ -138,6 +139,7 @@ const Item = styled.div`
     margin-bottom: 10px;
     display: flex;
     align-items: center;
+    gap: 8px;
     &.fade-in {
         opacity: 0;
         animation: ${fadeIn} 0.5s forwards;
@@ -151,21 +153,14 @@ const Item = styled.div`
 const ItemImage = styled.img`
     width: 50px;
     height: 50px;
-    border-radius: 50%;
+    border-radius: 20%;
     margin-right: 10px;
 `
 
 const ItemInfo = styled.div`
     display: flex;
+    gap: 8px;
     flex-direction: column;
-`
-
-const ItemName = styled.div`
-    font-weight: bold;
-`
-
-const Experience = styled.div`
-    color: #555;
 `
 
 export default FilterComponent
