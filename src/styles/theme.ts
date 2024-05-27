@@ -4,6 +4,9 @@ import { Theme } from '@emotion/react'
  */
 export const defaultTheme: Theme = {
     primaryColor: {
+        beige: {
+            1: '#E5D3B3',
+        },
         black: {
             1: '#35363D',
         },

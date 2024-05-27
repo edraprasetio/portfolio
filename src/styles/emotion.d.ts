@@ -5,6 +5,9 @@ import '@emotion/react'
 declare module '@emotion/react' {
     export interface Theme {
         primaryColor: {
+            beige: {
+                1: string
+            }
             black: {
                 1: string
             }
