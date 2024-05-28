@@ -4,7 +4,7 @@ import lineBlack from '../assets/icons/line_black.svg'
 import assembly from '../assets/logos/assembly.png'
 import inspire from '../assets/logos/inspire.png'
 import lgl from '../assets/logos/lgl.png'
-import redbrick from '../assets/logos/redbrick.png'
+import redbrick from '../assets/logos/inspireRedbrick.png'
 
 export function Experience() {
     return (
