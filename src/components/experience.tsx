@@ -31,6 +31,10 @@ export const CardWrapper = styled.div`
 export const TwoCardsWrapper = styled.div`
     display: flex;
     gap: 32px;
+    @media (max-width: ${(props) => props.theme.breakPoints.phone}) {
+        flex-direction: column;
+        gap: 56px;
+    }
 `
 
 export const Card = styled.div`

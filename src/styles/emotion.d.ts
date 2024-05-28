@@ -24,5 +24,11 @@ declare module '@emotion/react' {
                 3: string
             }
         }
+        breakPoints: {
+            tablet: string
+            miniTablet: string
+            largePhone: string
+            phone: string
+        }
     }
 }

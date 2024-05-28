@@ -46,7 +46,7 @@ export const FilterComponent: React.FC<FilterComponentProps> = ({ items }) => {
             <CategoryContainer>
                 {categories.map((category) => (
                     <CategoryButton key={category} isSelected={category === selectedCategory} onClick={() => handleFilterChange(category)}>
-                        <H1 style={{ fontSize: '14px' }}>{category}</H1>
+                        {category}
                     </CategoryButton>
                 ))}
             </CategoryContainer>
@@ -90,6 +90,10 @@ const CategoryButton = styled.button<{ isSelected: boolean }>`
     cursor: pointer;
     text-transform: uppercase;
     transition: border-color 0.3s ease;
+    font-size: 14px;
+    font-family: PlusJakartaSans-SemiBold;
+    font-weight: 500;
+    letter-spacing: 1px;
 
     &:hover {
         background-color: ${(props) => (props.isSelected ? props.theme.primaryColor.white[3] : props.theme.primaryColor.grey[1])};
@@ -98,6 +102,10 @@ const CategoryButton = styled.button<{ isSelected: boolean }>`
     &:active {
         background-color: ${(props) => (props.isSelected ? props.theme.primaryColor.black[1] : props.theme.primaryColor.white[1])};
         color: ${(props) => (props.isSelected ? props.theme.primaryColor.white[1] : props.theme.primaryColor.black[1])};
+    }
+
+    @media (max-width: ${(props) => props.theme.breakPoints.phone}) {
+        font-size: 12px;
     }
 `
 
@@ -130,6 +138,9 @@ const ItemList = styled.div`
     column-gap: 16px;
     justify-content: center;
     width: 100%;
+    @media (max-width: ${(props) => props.theme.breakPoints.phone}) {
+        width: 240px;
+    }
 `
 
 const Item = styled.div`
@@ -147,6 +158,9 @@ const Item = styled.div`
     &.fade-out {
         opacity: 1;
         animation: ${fadeOut} 0.5s forwards;
+    }
+    @media (max-width: ${(props) => props.theme.breakPoints.phone}) {
+        width: 240px;
     }
 `
 

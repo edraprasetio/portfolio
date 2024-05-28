@@ -4,7 +4,7 @@ export const scrollToSection = (id: string) => {
     } else {
         const section = document.getElementById(id)
         if (section) {
-            section.scrollIntoView({ behavior: 'smooth' })
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' })
         }
     }
 }

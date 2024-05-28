@@ -10,6 +10,11 @@ export const Background = styled.div`
     padding-bottom: 128px;
     justify-content: center;
     align-items: center;
+    @media (max-width: ${(props) => props.theme.breakPoints.miniTablet}) {
+        flex-direction: column;
+        gap: 56px;
+        padding-bottom: 96px;
+    }
 `
 
 const HeroHeader = styled.div`
@@ -20,10 +25,18 @@ const HeroHeader = styled.div`
 
 export const HeroMainHeader = styled(HeroHeader)`
     gap: 16px;
+    @media (max-width: ${(props) => props.theme.breakPoints.miniTablet}) {
+        justify-content: center;
+        align-items: center;
+    }
 `
 
 export const HeroNameHeader = styled(HeroHeader)`
     gap: 4px;
+    @media (max-width: ${(props) => props.theme.breakPoints.miniTablet}) {
+        justify-content: center;
+        align-items: center;
+    }
 `
 
 export const CheckMainHeader = styled.div`

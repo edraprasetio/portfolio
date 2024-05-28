@@ -12,6 +12,7 @@ export const Background = styled.div`
     padding-bottom: 128px;
     justify-content: center;
     align-items: center;
+    text-align: center;
 `
 
 export const HeaderWrapper = styled.div`

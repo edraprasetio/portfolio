@@ -4,6 +4,8 @@ import { HeaderLink } from './link'
 import { useEffect, useState } from 'react'
 import { H1, H2 } from '../../styles/typography'
 import { scrollToSection } from '../../utils'
+import closeIcon from '../../assets/icons/menuClose.svg'
+import menuIcon from '../../assets/icons/menuOpen.svg'
 
 // Container that makes all of it's contents stick to the top of the viewport
 const StickyContainer = styled.div`
@@ -26,11 +28,8 @@ const NavWrapper = styled.nav`
     z-index: 10;
     transition: all 0.3s;
 
-    @media (max-width: 424px) {
-        padding: 32px 16px;
-    }
-    @media (max-width: 584px) {
-        padding: 32px 12px;
+    @media (max-width: ${(props) => props.theme.breakPoints.largePhone}) {
+        padding: 16px 128px;
     }
 
     &:hover {
@@ -48,6 +47,36 @@ const LinkWrapper = styled.div`
     display: flex;
     flex-direction: row;
     gap: 16px;
+    @media (max-width: ${(props) => props.theme.breakPoints.miniTablet}) {
+        display: none;
+    }
+`
+
+const StyledMenuIcon = styled.img`
+    display: flex;
+    width: 48px;
+    height: 48px;
+    margin-left: 35px;
+    @media (min-width: ${(props) => props.theme.breakPoints.miniTablet}) {
+        display: none;
+    }
+`
+
+const OpenMenu = styled.div`
+    display: flex;
+    background-color: ${(props) => props.theme.primaryColor.white[2]};
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+    height: 90vh;
+    gap: 32px;
+    width: 100%;
+    align-items: center;
+    padding-top: 128px;
+    overflow-y: hidden;
+    @media (min-width: ${(props) => props.theme.breakPoints.miniTablet}) {
+        display: none;
+    }
 `
 
 const LogoWrapper = styled.div`
@@ -55,7 +84,9 @@ const LogoWrapper = styled.div`
 `
 
 export function NavBar() {
+    let menu
     const [hasShadow, setHasShadow] = useState(false)
+    const [showMenu, setShowMenu] = useState(false)
 
     useEffect(() => {
         const handleScroll = () => {
@@ -73,6 +104,43 @@ export function NavBar() {
             window.removeEventListener('scroll', handleScroll)
         }
     }, [])
+
+    const handleMenuClick = (id: string) => {
+        setShowMenu(false)
+        setTimeout(() => {
+            scrollToSection(id)
+        }, 0)
+    }
+
+    if (showMenu) {
+        menu = (
+            <OpenMenu>
+                <HeaderLink to='#about' onClick={() => handleMenuClick('about')}>
+                    <ClearButton>
+                        <H1>About</H1>
+                    </ClearButton>
+                </HeaderLink>
+
+                <HeaderLink to='#skills' onClick={() => handleMenuClick('skills')}>
+                    <ClearButton>
+                        <H1>Skills</H1>
+                    </ClearButton>
+                </HeaderLink>
+
+                <HeaderLink to='#experience' onClick={() => handleMenuClick('experience')}>
+                    <ClearButton>
+                        <H1>Experience</H1>
+                    </ClearButton>
+                </HeaderLink>
+
+                <HeaderLink to='#contact' onClick={() => handleMenuClick('contact')}>
+                    <ClearButton>
+                        <H1>Contact</H1>
+                    </ClearButton>
+                </HeaderLink>
+            </OpenMenu>
+        )
+    }
 
     return (
         <StickyContainer>
@@ -107,7 +175,9 @@ export function NavBar() {
                         </ClearButton>
                     </HeaderLink>
                 </LinkWrapper>
+                <StyledMenuIcon src={showMenu ? closeIcon : menuIcon} onClick={() => setShowMenu(!showMenu)} />
             </NavWrapper>
+            {menu}
         </StickyContainer>
     )
 }

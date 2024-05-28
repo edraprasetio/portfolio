@@ -11,6 +11,11 @@ export const Background = styled.div`
     padding-bottom: 128px;
     justify-content: center;
     align-items: start;
+    @media (max-width: ${(props) => props.theme.breakPoints.largePhone}) {
+        flex-direction: column;
+        gap: 56px;
+        align-items: center;
+    }
 `
 export const MainWrapper = styled.div`
     display: flex;

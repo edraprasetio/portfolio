@@ -19,11 +19,9 @@ const NavWrapper = styled.nav`
     z-index: 10;
     transition: all 0.3s;
 
-    @media (max-width: 424px) {
-        padding: 32px 16px;
-    }
-    @media (max-width: 584px) {
-        padding: 32px 12px;
+    @media (max-width: ${(props) => props.theme.breakPoints.largePhone}) {
+        flex-direction: column;
+        gap: 32px;
     }
 `
 
@@ -37,6 +35,11 @@ const RightWrapper = styled.div`
     display: flex;
     flex-direction: row;
     gap: 32px;
+    @media (max-width: ${(props) => props.theme.breakPoints.largePhone}) {
+        flex-direction: column;
+        text-align: center;
+        gap: 32px;
+    }
 `
 
 const LogoWrapper = styled.div`
@@ -47,12 +50,17 @@ const SocialWrapper = styled.div`
     display: flex;
     flex-direction: row;
     gap: 16px;
+    justify-content: center;
 `
 
 const AddressWrapper = styled.div`
     display: flex;
     flex-direction: column;
     gap: 8px;
+    @media (max-width: ${(props) => props.theme.breakPoints.largePhone}) {
+        text-align: center;
+        gap: 16px;
+    }
 `
 
 export function Footer() {
