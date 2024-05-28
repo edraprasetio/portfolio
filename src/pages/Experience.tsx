@@ -13,7 +13,7 @@ export function Experience() {
                 <Background>
                     <HeaderWrapper>
                         <img src={lineBlack} />
-                        <H2>WORK EXPERIENCE</H2> <img src={lineBlack} />
+                        WORK EXPERIENCE <img src={lineBlack} />
                     </HeaderWrapper>
 
                     <CardWrapper>

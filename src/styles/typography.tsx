@@ -19,6 +19,10 @@ export const H3 = styled.div`
     font-size: 32px;
     font-weight: 500;
     letter-spacing: 1px;
+
+    @media (max-width: ${(props) => props.theme.breakPoints.phone}) {
+        font-size: 24px;
+    }
 `
 
 export const H4 = styled.div`

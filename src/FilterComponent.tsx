@@ -79,6 +79,10 @@ const CategoryContainer = styled.div`
     justify-content: center;
     margin-bottom: 20px;
     gap: 16px;
+    @media (max-width: ${(props) => props.theme.breakPoints.phone}) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 `
 
 const CategoryButton = styled.button<{ isSelected: boolean }>`
@@ -140,6 +144,7 @@ const ItemList = styled.div`
     width: 100%;
     @media (max-width: ${(props) => props.theme.breakPoints.phone}) {
         width: 240px;
+        grid-template-columns: repeat(1, 1fr);
     }
 `
 

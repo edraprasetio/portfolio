@@ -20,8 +20,13 @@ const NavWrapper = styled.nav`
     transition: all 0.3s;
 
     @media (max-width: ${(props) => props.theme.breakPoints.largePhone}) {
+        padding: 128px 32px;
         flex-direction: column;
         gap: 32px;
+    }
+
+    @media (max-width: ${(props) => props.theme.breakPoints.phone}) {
+        padding: 128px 32px;
     }
 `
 

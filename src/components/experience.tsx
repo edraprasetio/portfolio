@@ -17,6 +17,13 @@ export const HeaderWrapper = styled.div`
     display: flex;
     gap: 8px;
     margin-bottom: 8px;
+    font-family: PlusJakartaSans-SemiBold;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    @media (max-width: ${(props) => props.theme.breakPoints.phone}) {
+        font-size: 14px;
+    }
 `
 
 export const CardWrapper = styled.div`

@@ -27,6 +27,6 @@ export const defaultTheme: Theme = {
         tablet: '1420px',
         miniTablet: '1240px',
         largePhone: '940px',
-        phone: '800px',
+        phone: '586px',
     },
 }

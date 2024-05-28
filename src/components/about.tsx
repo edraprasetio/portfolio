@@ -33,6 +33,10 @@ export const LeftContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 16px;
+
+    @media (max-width: ${(props) => props.theme.breakPoints.phone}) {
+        padding: 0px 32px;
+    }
 `
 
 export const HeaderWrapper = styled.div`

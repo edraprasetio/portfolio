@@ -32,6 +32,10 @@ const NavWrapper = styled.nav`
         padding: 16px 128px;
     }
 
+    @media (max-width: ${(props) => props.theme.breakPoints.phone}) {
+        padding: 16px 32px;
+    }
+
     &:hover {
         background-color: ${(props) => props.theme.primaryColor.white[2]};
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
