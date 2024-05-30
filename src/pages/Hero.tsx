@@ -20,7 +20,7 @@ export function Hero() {
 
                     <HeroNameHeader>
                         <H3>
-                            A <span style={{ color: '#4D7CF6' }}>WEB DEVELOPER</span>
+                            A <span style={{ color: '#4D7CF6' }}>SOFTWARE ENGINEER</span>
                         </H3>
                         <H3>BASED IN VICTORIA, BC</H3>
                     </HeroNameHeader>
