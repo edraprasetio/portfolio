@@ -11,7 +11,7 @@ const BaseButton = styled.button`
 `
 
 export const ClearButton = styled(BaseButton)`
-    border: 2px solid rgba(0, 0, 0, 0);
+    border: 3px solid rgba(0, 0, 0, 0);
     background-color: transparent;
     color: ${(props) => props.theme.primaryColor.black[1]};
     &:hover {
@@ -54,5 +54,20 @@ export const WhiteButton = styled(BaseButton)`
         background-color: ${(props) => props.theme.primaryColor.black[1]};
         border: 2px solid ${(props) => props.theme.primaryColor.white[1]};
         color: ${(props) => props.theme.primaryColor.white[1]};
+    }
+`
+
+export const BlackButton = styled(BaseButton)`
+    width: 240px;
+    padding: 4px 16px;
+    border: 3px solid ${(props) => props.theme.primaryColor.black[1]};
+    background-color: ${(props) => props.theme.primaryColor.black[1]};
+    color: ${(props) => props.theme.primaryColor.white[1]};
+    &:hover {
+        background-color: ${(props) => props.theme.primaryColor.grey[1]};
+    }
+    &:active {
+        background-color: ${(props) => props.theme.primaryColor.white[1]};
+        color: ${(props) => props.theme.primaryColor.black[1]};
     }
 `

@@ -161,15 +161,15 @@ export function NavBar() {
                         </ClearButton>
                     </HeaderLink>
 
-                    <HeaderLink to='#skills' onClick={() => scrollToSection('skills')}>
-                        <ClearButton>
-                            <H1>Skills</H1>
-                        </ClearButton>
-                    </HeaderLink>
-
                     <HeaderLink to='#experience' onClick={() => scrollToSection('experience')}>
                         <ClearButton>
                             <H1>Experience</H1>
+                        </ClearButton>
+                    </HeaderLink>
+
+                    <HeaderLink to='#projects' onClick={() => scrollToSection('projects')}>
+                        <ClearButton>
+                            <H1>Projects</H1>
                         </ClearButton>
                     </HeaderLink>
 

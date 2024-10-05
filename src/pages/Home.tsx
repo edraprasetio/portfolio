@@ -4,7 +4,9 @@ import { About } from './About'
 import { Contact } from './Contact'
 import { Experience } from './Experience'
 import { Hero } from './Hero'
+import { Projects } from './Project'
 import { Skills } from './Skills'
+import { Work } from './Work'
 
 export const Home = () => {
     return (
@@ -12,8 +14,9 @@ export const Home = () => {
             <NavBar />
             <Hero />
             <About />
-            <Skills />
-            <Experience />
+            {/* <Skills /> */}
+            <Work />
+            <Projects />
             <Contact />
             <Footer />
         </div>

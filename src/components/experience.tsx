@@ -7,7 +7,7 @@ export const Background = styled.div`
     display: flex;
     flex-direction: column;
     gap: 56px;
-    padding-top: 128px;
+    padding-top: 192px;
     padding-bottom: 128px;
     justify-content: center;
     align-items: center;

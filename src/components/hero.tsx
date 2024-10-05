@@ -7,7 +7,7 @@ export const Background = styled.div`
     flex-direction: row;
     gap: 128px;
     padding-top: 96px;
-    padding-bottom: 128px;
+    padding-bottom: 64px;
     justify-content: center;
     align-items: center;
     @media (max-width: ${(props) => props.theme.breakPoints.miniTablet}) {

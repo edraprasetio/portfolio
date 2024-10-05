@@ -47,9 +47,7 @@ const RightWrapper = styled.div`
     }
 `
 
-const LogoWrapper = styled.div`
-    color: ${(props) => props.theme.primaryColor.white[1]};
-`
+const LogoWrapper = styled.div``
 
 const SocialWrapper = styled.div`
     display: flex;
@@ -68,36 +66,41 @@ const AddressWrapper = styled.div`
     }
 `
 
+const FooterLink = styled(HeaderLink)`
+    color: ${(props) => props.theme.primaryColor.white[1]};
+    &:hover {
+        color: ${(props) => props.theme.primaryColor.blue[2]};
+    }
+`
+
 export function Footer() {
     return (
         <NavWrapper>
             <AddressWrapper>
-                <HeaderLink to='/' onClick={() => scrollToSection('hero')}>
-                    <LogoWrapper>
-                        <H2>Edra Prasetio</H2>
-                    </LogoWrapper>
-                </HeaderLink>
+                <FooterLink to='/' onClick={() => scrollToSection('hero')}>
+                    <H2>Edra Prasetio</H2>
+                </FooterLink>
                 <H1 style={{ fontSize: '14px' }}>VICTORIA, BC</H1>
                 <H1 style={{ fontSize: '14px' }}>CANADA</H1>
             </AddressWrapper>
 
             <RightWrapper>
                 <LinkWrapper>
-                    <HeaderLink to='#about' onClick={() => scrollToSection('about')}>
-                        <H4 style={{ color: '#FFFFFF' }}>About</H4>
-                    </HeaderLink>
+                    <FooterLink to='#about' onClick={() => scrollToSection('about')}>
+                        <H4>About</H4>
+                    </FooterLink>
 
-                    <HeaderLink to='#skills' onClick={() => scrollToSection('skills')}>
-                        <H4 style={{ color: '#FFFFFF' }}>Skills</H4>
-                    </HeaderLink>
+                    <FooterLink to='#skills' onClick={() => scrollToSection('skills')}>
+                        <H4>Skills</H4>
+                    </FooterLink>
 
-                    <HeaderLink to='#experience' onClick={() => scrollToSection('experience')}>
-                        <H4 style={{ color: '#FFFFFF' }}>Experience</H4>
-                    </HeaderLink>
+                    <FooterLink to='#experience' onClick={() => scrollToSection('experience')}>
+                        <H4>Experience</H4>
+                    </FooterLink>
 
-                    <HeaderLink to='#contact' onClick={() => scrollToSection('contact')}>
-                        <H4 style={{ color: '#FFFFFF' }}>Contact</H4>
-                    </HeaderLink>
+                    <FooterLink to='#contact' onClick={() => scrollToSection('contact')}>
+                        <H4>Contact</H4>
+                    </FooterLink>
                 </LinkWrapper>
                 <LinkWrapper>
                     <H4>SOCIALS</H4>

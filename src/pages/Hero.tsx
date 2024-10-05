@@ -4,7 +4,7 @@ import EdraImg from '../assets/images/edra_square.png'
 import GitHubBlack from '../assets/icons/github_black.svg'
 import LinkedInBlack from '../assets/icons/linkedIn_black.svg'
 import { H1, H3 } from '../styles/typography'
-import { BlueButton } from '../components/atoms/button'
+import { BlackButton, BlueButton } from '../components/atoms/button'
 import { scrollToSection } from '../utils'
 import { SimpleLink } from '../components/atoms/link'
 
@@ -20,7 +20,7 @@ export function Hero() {
 
                     <HeroNameHeader>
                         <H3>
-                            A <span style={{ color: '#4D7CF6' }}>SOFTWARE ENGINEER</span>
+                            A <span style={{ color: '#404040' }}>SOFTWARE ENGINEER</span>
                         </H3>
                         <H3>BASED IN VICTORIA, BC</H3>
                     </HeroNameHeader>
@@ -36,9 +36,9 @@ export function Hero() {
                         </CheckContentHeader>
                     </CheckMainHeader>
 
-                    <BlueButton style={{ marginTop: '4px' }} onClick={() => scrollToSection('contact')}>
-                        <H1>COME HAVE A CHAT</H1>
-                    </BlueButton>
+                    <BlackButton style={{ marginTop: '4px' }} onClick={() => scrollToSection('contact')}>
+                        <H1>Let{'\u0027'}s Chat</H1>
+                    </BlackButton>
                 </HeroMainHeader>
 
                 <ImageContainer>

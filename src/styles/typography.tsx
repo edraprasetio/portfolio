@@ -1,21 +1,21 @@
 import styled from '@emotion/styled'
 
 export const H1 = styled.div`
-    font-family: PlusJakartaSans-SemiBold;
+    font-family: Inter-SemiBold;
     font-size: 16px;
     font-weight: 500;
     letter-spacing: 1px;
 `
 
 export const H2 = styled.div`
-    font-family: PlusJakartaSans-SemiBold;
+    font-family: Inter-SemiBold;
     font-size: 20px;
     font-weight: 500;
     letter-spacing: 3px;
 `
 
 export const H3 = styled.div`
-    font-family: PlusJakartaSans-SemiBold;
+    font-family: Inter-SemiBold;
     font-size: 32px;
     font-weight: 500;
     letter-spacing: 1px;
@@ -26,7 +26,7 @@ export const H3 = styled.div`
 `
 
 export const H4 = styled.div`
-    font-family: PlusJakartaSans-Regular;
+    font-family: Inter-Medium;
     font-size: 16px;
     font-weight: 500;
     letter-spacing: 1px;
@@ -34,7 +34,7 @@ export const H4 = styled.div`
 `
 
 export const H5 = styled.div`
-    font-family: PlusJakartaSans-Bold;
+    font-family: Inter-Bold;
     font-size: 20px;
     font-weight: 500;
     letter-spacing: 1px;

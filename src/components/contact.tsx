@@ -3,12 +3,11 @@ import { WhiteButton } from './atoms/button'
 
 export const Background = styled.div`
     width: 100%;
-    background-color: ${(props) => props.theme.primaryColor.blue[2]};
-    color: ${(props) => props.theme.primaryColor.white[1]};
+    color: ${(props) => props.theme.primaryColor.black[1]};
     display: flex;
     flex-direction: column;
     gap: 32px;
-    padding-top: 128px;
+    padding-top: 64px;
     padding-bottom: 128px;
     justify-content: center;
     align-items: center;
