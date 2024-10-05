@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Background, EmailButton, HeaderWrapper } from '../components/contact'
+import { Background, HeaderWrapper } from '../components/contact'
 import lineBlack from '../assets/icons/line_black.svg'
 import { H1, H2, H3, H4, H5 } from '../styles/typography'
 import { SimpleLink } from '../components/atoms/link'

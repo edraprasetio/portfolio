@@ -4,7 +4,7 @@ import EdraImg from '../assets/images/edra_square.png'
 import GitHubBlack from '../assets/icons/github_black.svg'
 import LinkedInBlack from '../assets/icons/linkedIn_black.svg'
 import { H1, H3 } from '../styles/typography'
-import { BlackButton, BlueButton } from '../components/atoms/button'
+import { BlackButton } from '../components/atoms/button'
 import { scrollToSection } from '../utils'
 import { SimpleLink } from '../components/atoms/link'
 

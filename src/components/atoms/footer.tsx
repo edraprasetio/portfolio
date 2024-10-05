@@ -47,8 +47,6 @@ const RightWrapper = styled.div`
     }
 `
 
-const LogoWrapper = styled.div``
-
 const SocialWrapper = styled.div`
     display: flex;
     flex-direction: row;
