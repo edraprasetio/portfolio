@@ -1,6 +1,7 @@
 import { Background, Description, ExperienceContainer, HeaderWrapper, Skill, SkillsContainer, SkillsSection } from '../components/work'
 import { H1, H2, H4 } from '../styles/typography'
 import line from '../assets/icons/line_black.svg'
+import ResumeDoc from '../assets/files/EdraPrasetio_resume-summer2024-5.5.pdf'
 import { BlackButton } from '../components/atoms/button'
 
 export function Work() {
@@ -119,9 +120,11 @@ export function Work() {
                         </SkillsContainer>
                     </Description>
                 </ExperienceContainer>
-                <BlackButton onClick={handleDownload}>
-                    <H4>Download Resume</H4>
-                </BlackButton>
+                <a href={ResumeDoc} download='EdraPrasetioResume'>
+                    <BlackButton>
+                        <H4>Download Resume</H4>
+                    </BlackButton>
+                </a>
             </Background>
         </section>
     )

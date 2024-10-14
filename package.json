@@ -1,5 +1,5 @@
 {
-    "homepage": "https://edraprasetio.github.io/portfolio/",
+    "homepage": "https://edraprasetio.github.io/",
     "name": "portfolio",
     "version": "0.1.0",
     "private": true,
@@ -14,6 +14,7 @@
         "@types/react": "^18.2.0",
         "@types/react-dom": "^18.2.1",
         "build": "^0.1.4",
+        "firebase": "^10.14.1",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "react-router-dom": "^6.11.0",
