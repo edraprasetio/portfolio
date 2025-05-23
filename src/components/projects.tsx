@@ -1,5 +1,9 @@
 import styled from '@emotion/styled'
 import { SimpleLink } from './atoms/link'
+import { useState } from 'react'
+import { Paragraph16 } from '../styles/typography'
+import linkBlue from '../assets/logos/link-blue.svg'
+import linkOrange from '../assets/logos/link-orange.svg'
 
 export const Background = styled.div`
     width: 100%;
@@ -81,6 +85,14 @@ export const ProjectCard = styled.div`
     }
 `
 
+export const CardContainer = styled.div`
+    display: flex;
+    gap: 32px;
+    @media (max-width: ${(props) => props.theme.breakPoints.miniTablet}) {
+        flex-direction: column;
+    }
+`
+
 export const LogoWrapper = styled.img`
     width: 96px;
     height: 96px;
@@ -91,3 +103,52 @@ export const DescriptionWrapper = styled.div`
     gap: 8px;
     color: ${(props) => props.theme.primaryColor.blue[3]};
 `
+
+export const BubbleWrapper = styled.div`
+    display: flex;
+    gap: 8px;
+`
+
+export const Bubble = styled.div`
+    display: flex;
+    padding: 4px 8px;
+    background-color: #eaf8fb;
+    border-radius: 36px;
+`
+export const ProjectLink = styled(SimpleLink)`
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 4px;
+    color: #309bff;
+    transition: color 0.3s ease, gap 0.3s ease;
+    &:hover {
+        gap: 8px;
+        color: ${(props) => props.theme.primaryColor.orange[1]};
+    }
+`
+
+interface ProjectLinkWithHoverProps {
+    to: string
+    label: string
+}
+
+export const ProjectLinkWithHover = ({
+    to,
+    label,
+}: ProjectLinkWithHoverProps) => {
+    const [isHovered, setIsHovered] = useState(false)
+    return (
+        <ProjectLink
+            to={to}
+            target='_blank'
+            rel='noopener noreferrer'
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+        >
+            <Paragraph16>{label}</Paragraph16>
+            <img src={isHovered ? linkOrange : linkBlue} alt='link icon' />
+        </ProjectLink>
+    )
+}
