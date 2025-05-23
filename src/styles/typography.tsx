@@ -40,3 +40,37 @@ export const H5 = styled.div`
     letter-spacing: 1px;
     line-height: 1.6;
 `
+
+export const Header16 = styled.div`
+    font-family: MonaSans-Medium;
+    font-size: 16px;
+`
+
+export const Header20 = styled.div`
+    font-family: MonaSans-Medium;
+    font-size: 20px;
+`
+
+export const Header24 = styled.div`
+    font-family: MonaSans-SemiBold;
+    font-size: 24px;
+`
+
+export const Header40 = styled.div`
+    font-family: MonaSans-SemiBold;
+    font-size: 40px;
+`
+
+export const Header64 = styled.div`
+    font-family: MonaSans-SemiBold;
+    font-size: 64px;
+`
+export const Paragraph14 = styled.div`
+    font-family: MonaSans-Medium;
+    font-size: 14px;
+`
+
+export const Paragraph16 = styled.div`
+    font-family: MonaSans-Medium;
+    font-size: 16px;
+`

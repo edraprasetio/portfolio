@@ -13,6 +13,6 @@ export const SimpleLink = styled(Link)`
 `
 
 export const HeaderLink = styled(Link)`
-    text-transform: uppercase;
+    text-transform: unset;
     text-decoration: none;
 `

@@ -71,3 +71,57 @@ export const BlackButton = styled(BaseButton)`
         color: ${(props) => props.theme.primaryColor.black[1]};
     }
 `
+
+export const NavButton = styled.div`
+    position: relative;
+    display: inline-block;
+    bottom: -8px;
+    color: ${(props) => props.theme.primaryColor.blue[3]};
+    text-decoration: none;
+    text-transform: unset;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0%;
+        height: 3px;
+        background-color: ${(props) => props.theme.primaryColor.blue[3]};
+        transition: width 0.3s ease;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+
+    &:active {
+        color: ${(props) => props.theme.primaryColor.orange[1]};
+    }
+
+    &:active::after {
+        background-color: ${(props) => props.theme.primaryColor.orange[1]};
+    }
+`
+
+export const OrangeButton = styled.div`
+    display: flex;
+    padding: 8px 32px;
+    border-radius: 36px;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid ${(props) => props.theme.primaryColor.orange[1]};
+    background-color: ${(props) => props.theme.primaryColor.orange[1]};
+    color: ${(props) => props.theme.primaryColor.white[1]};
+
+    transition: background-color 0.3s ease, border-color 0.3s ease,
+        color 0.3s ease;
+    &:hover {
+        border: 3px solid ${(props) => props.theme.primaryColor.blue[3]};
+        background-color: ${(props) => props.theme.primaryColor.blue[3]};
+    }
+    &:active {
+        background-color: ${(props) => props.theme.primaryColor.white[1]};
+        color: ${(props) => props.theme.primaryColor.blue[3]};
+    }
+`

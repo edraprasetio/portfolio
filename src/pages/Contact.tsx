@@ -24,9 +24,15 @@ export function Contact() {
                     <H2>CONTACT</H2>
                     <img src={lineBlack} />
                 </HeaderWrapper>
-                <H3 style={{ maxWidth: '800px' }}>Any Type of Questions & Discussions.</H3>
+                <H3 style={{ maxWidth: '800px' }}>
+                    Any Type of Questions & Discussions.
+                </H3>
                 <H4 style={{ maxWidth: '512px', padding: '0px 32px' }}>
-                    Feel free to reach out if you think we{'\u0027'}d be a great fit! Whether you{'\u0027'}re looking to collaborate on a project or just want to have a conversation, the best way to contact me is via email. Looking forward to connecting! Cheers!
+                    Feel free to reach out if you think we{'\u0027'}d be a great
+                    fit! Whether you{'\u0027'}re looking to collaborate on a
+                    project or just want to have a conversation, the best way to
+                    contact me is via email. Looking forward to connecting!
+                    Cheers!
                 </H4>
 
                 {showEmail ? (

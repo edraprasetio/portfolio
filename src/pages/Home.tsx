@@ -8,13 +8,13 @@ import { Work } from './Work'
 
 export const Home = () => {
     return (
-        <div style={{ backgroundColor: '#F3F3F3' }}>
+        <div>
             <NavBar />
             <Hero />
-            <About />
             {/* <Skills /> */}
-            <Work />
+            {/* <Work /> */}
             <Projects />
+            <About />
             <Contact />
             <Footer />
         </div>

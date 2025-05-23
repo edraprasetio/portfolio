@@ -1,11 +1,12 @@
 import styled from '@emotion/styled'
-import { ClearButton } from './button'
+import { ClearButton, NavButton, OrangeButton } from './button'
 import { HeaderLink } from './link'
 import { useEffect, useState } from 'react'
-import { H1, H2 } from '../../styles/typography'
+import { H1, H2, Header16, Header20 } from '../../styles/typography'
 import { scrollToSection } from '../../utils'
 import closeIcon from '../../assets/icons/menuClose.svg'
 import menuIcon from '../../assets/icons/menuOpen.svg'
+import nameLogo from '../../assets/logos/edraPrasetioLogo1.2.png'
 
 // Container that makes all of it's contents stick to the top of the viewport
 const StickyContainer = styled.div`
@@ -18,12 +19,13 @@ const StickyContainer = styled.div`
 // Styling for NavWrapper
 const NavWrapper = styled.nav`
     box-sizing: border-box;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: transparent;
     padding: 16px 256px;
-    position: sticky;
+    position: absolute;
     top: 0;
     z-index: 10;
     transition: all 0.3s;
@@ -50,7 +52,8 @@ const NavWrapper = styled.nav`
 const LinkWrapper = styled.div`
     display: flex;
     flex-direction: row;
-    gap: 16px;
+    color: #1a73e8;
+    gap: 32px;
     @media (max-width: ${(props) => props.theme.breakPoints.miniTablet}) {
         display: none;
     }
@@ -83,8 +86,9 @@ const OpenMenu = styled.div`
     }
 `
 
-const LogoWrapper = styled.div`
-    color: ${(props) => props.theme.primaryColor.black[1]};
+const LogoWrapper = styled.img`
+    width: 64px;
+    height: 64px;
 `
 
 export function NavBar() {
@@ -119,25 +123,27 @@ export function NavBar() {
     if (showMenu) {
         menu = (
             <OpenMenu>
-                <HeaderLink to='#about' onClick={() => handleMenuClick('about')}>
-                    <ClearButton>
+                <HeaderLink
+                    to='#about'
+                    onClick={() => handleMenuClick('about')}
+                >
+                    <NavButton>
                         <H1>About</H1>
-                    </ClearButton>
+                    </NavButton>
                 </HeaderLink>
 
-                <HeaderLink to='#skills' onClick={() => handleMenuClick('skills')}>
+                <HeaderLink
+                    to='#skills'
+                    onClick={() => handleMenuClick('skills')}
+                >
                     <ClearButton>
                         <H1>Skills</H1>
                     </ClearButton>
                 </HeaderLink>
-
-                <HeaderLink to='#experience' onClick={() => handleMenuClick('experience')}>
-                    <ClearButton>
-                        <H1>Experience</H1>
-                    </ClearButton>
-                </HeaderLink>
-
-                <HeaderLink to='#contact' onClick={() => handleMenuClick('contact')}>
+                <HeaderLink
+                    to='#contact'
+                    onClick={() => handleMenuClick('contact')}
+                >
                     <ClearButton>
                         <H1>Contact</H1>
                     </ClearButton>
@@ -150,36 +156,45 @@ export function NavBar() {
         <StickyContainer>
             <NavWrapper className={hasShadow ? 'displayShadow' : ''}>
                 <HeaderLink to='/' onClick={() => scrollToSection('hero')}>
-                    <LogoWrapper>
-                        <H2>Edra</H2>
-                    </LogoWrapper>
+                    <LogoWrapper src={nameLogo} />
                 </HeaderLink>
                 <LinkWrapper>
-                    <HeaderLink to='#about' onClick={() => scrollToSection('about')}>
-                        <ClearButton>
-                            <H1>About</H1>
-                        </ClearButton>
+                    <HeaderLink to='/' onClick={() => scrollToSection('hero')}>
+                        <NavButton>
+                            <Header20>Home</Header20>
+                        </NavButton>
+                    </HeaderLink>
+                    <HeaderLink
+                        to='#projects'
+                        onClick={() => scrollToSection('projects')}
+                    >
+                        <NavButton>
+                            <Header20>Projects</Header20>
+                        </NavButton>
                     </HeaderLink>
 
-                    <HeaderLink to='#experience' onClick={() => scrollToSection('experience')}>
-                        <ClearButton>
-                            <H1>Experience</H1>
-                        </ClearButton>
+                    <HeaderLink
+                        to='#about'
+                        onClick={() => scrollToSection('about')}
+                    >
+                        <NavButton>
+                            <Header20>About</Header20>
+                        </NavButton>
                     </HeaderLink>
 
-                    <HeaderLink to='#projects' onClick={() => scrollToSection('projects')}>
-                        <ClearButton>
-                            <H1>Projects</H1>
-                        </ClearButton>
-                    </HeaderLink>
-
-                    <HeaderLink to='#contact' onClick={() => scrollToSection('contact')}>
-                        <ClearButton>
-                            <H1>Contact</H1>
-                        </ClearButton>
+                    <HeaderLink
+                        to='#contact'
+                        onClick={() => scrollToSection('contact')}
+                    >
+                        <OrangeButton>
+                            <Header20>Contact</Header20>
+                        </OrangeButton>
                     </HeaderLink>
                 </LinkWrapper>
-                <StyledMenuIcon src={showMenu ? closeIcon : menuIcon} onClick={() => setShowMenu(!showMenu)} />
+                <StyledMenuIcon
+                    src={showMenu ? closeIcon : menuIcon}
+                    onClick={() => setShowMenu(!showMenu)}
+                />
             </NavWrapper>
             {menu}
         </StickyContainer>

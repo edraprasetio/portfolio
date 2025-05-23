@@ -13,14 +13,18 @@ export const defaultTheme: Theme = {
         blue: {
             1: '#4D7CF6',
             2: '#6590FF',
+            3: '#1a73e8',
         },
         grey: {
             1: '#666464',
         },
+        orange: {
+            1: '  #FFB74D',
+        },
         white: {
             1: '#FFFFFF',
-            2: '#F3F3F3',
-            3: '#DFDFDF',
+            2: '#F7FAF4',
+            3: '#EAF8FB',
         },
     },
     breakPoints: {

@@ -2,11 +2,11 @@ import styled from '@emotion/styled'
 
 export const Background = styled.div`
     width: 100%;
-    background-color: ${(props) => props.theme.primaryColor.white[2]};
+    background-color: ${(props) => props.theme.primaryColor.white[3]};
     display: flex;
     flex-direction: row;
     gap: 128px;
-    padding-top: 96px;
+    padding-top: 128px;
     padding-bottom: 64px;
     justify-content: center;
     align-items: center;
