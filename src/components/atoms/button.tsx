@@ -23,23 +23,6 @@ export const ClearButton = styled(BaseButton)`
     }
 `
 
-export const BlueButton = styled(BaseButton)`
-    width: 240px;
-    padding: 4px 24px;
-    border: 2px solid ${(props) => props.theme.primaryColor.blue[1]};
-    background-color: ${(props) => props.theme.primaryColor.blue[1]};
-    color: ${(props) => props.theme.primaryColor.white[1]};
-    &:hover {
-        background-color: ${(props) => props.theme.primaryColor.blue[2]};
-        border: 2px solid ${(props) => props.theme.primaryColor.blue[2]};
-    }
-    &:active {
-        background-color: ${(props) => props.theme.primaryColor.white[1]};
-        border: 2px solid ${(props) => props.theme.primaryColor.blue[1]};
-        color: ${(props) => props.theme.primaryColor.blue[1]};
-    }
-`
-
 export const WhiteButton = styled(BaseButton)`
     width: 240px;
     padding: 4px 24px;
@@ -123,5 +106,18 @@ export const OrangeButton = styled.div`
     &:active {
         background-color: ${(props) => props.theme.primaryColor.white[1]};
         color: ${(props) => props.theme.primaryColor.blue[3]};
+    }
+`
+
+export const BlueButton = styled(OrangeButton)`
+    border: 3px solid ${(props) => props.theme.primaryColor.blue[3]};
+    background-color: ${(props) => props.theme.primaryColor.blue[3]};
+    &:hover {
+        border: 3px solid ${(props) => props.theme.primaryColor.orange[1]};
+        background-color: ${(props) => props.theme.primaryColor.orange[1]};
+    }
+    &:active {
+        background-color: ${(props) => props.theme.primaryColor.white[1]};
+        color: ${(props) => props.theme.primaryColor.orange[1]};
     }
 `

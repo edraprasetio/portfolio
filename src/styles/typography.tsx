@@ -56,6 +56,11 @@ export const Header24 = styled.div`
     font-size: 24px;
 `
 
+export const Header32 = styled.div`
+    font-family: MonaSans-SemiBold;
+    font-size: 32px;
+`
+
 export const Header40 = styled.div`
     font-family: MonaSans-SemiBold;
     font-size: 40px;

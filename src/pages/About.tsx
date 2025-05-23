@@ -1,20 +1,37 @@
 import {
     Background,
-    EducationContent,
+    BottomRightImage,
     HeaderWrapper,
     LeftContainer,
     RightContainer,
+    TopLeftImage,
 } from '../components/about'
-import { H1, H2, H4 } from '../styles/typography'
-import lineBlack from '../assets/icons/line_black.svg'
+import {
+    H1,
+    H2,
+    H4,
+    Header16,
+    Header24,
+    Header32,
+    Header40,
+    Paragraph16,
+} from '../styles/typography'
 import { SimpleLink } from '../components/atoms/link'
 import styled from '@emotion/styled'
+import { BlueButton, OrangeButton } from '../components/atoms/button'
+import ResumeDoc from '../assets/files/Resume_EdraPrasetio.pdf'
+import topLeftImg from '../assets/images/topLeftImgLarge.svg'
+import bottomRightImg from '../assets/images/bottomRightImg.svg'
 
 const CompanyLink = styled(SimpleLink)`
-    color: ${(props) => props.theme.primaryColor.black[1]};
+    color: ${(props) => props.theme.primaryColor.blue[3]};
+    font-family: MonaSans-SemiBold;
+    font-size: 16px;
+    line-height: unset;
+    transition: color 0.3s ease;
 
     &:hover {
-        color: ${(props) => props.theme.primaryColor.blue[2]};
+        color: ${(props) => props.theme.primaryColor.orange[1]};
     }
 `
 
@@ -23,60 +40,55 @@ export function About() {
         <div>
             <section id='about'>
                 <Background>
-                    <LeftContainer style={{ maxWidth: '500px' }}>
-                        <HeaderWrapper>
-                            <H2>ABOUT ME</H2> <img src={lineBlack} />
-                        </HeaderWrapper>
-                        <H4>
-                            Hi there! I{'\u0027'}m Edra, a Software Engineer
-                            based in Victoria. During my time at university, I
-                            had the chance to lead a capstone project with a
-                            fantastic team of fellow students, which really
-                            helped me sharpen my leadership and project
-                            management skills. I also completed co-op programs
-                            at{' '}
-                            <CompanyLink
-                                to='https://assmb.ly/'
-                                target='_blank'
-                                rel='noopener noreferrer'
-                            >
-                                <span>Assembly</span>
-                            </CompanyLink>{' '}
-                            and{' '}
-                            <CompanyLink
-                                to='https://www.rdbrck.com/'
-                                target='_blank'
-                                rel='noopener noreferrer'
-                            >
-                                <span>Redbrick</span>
-                            </CompanyLink>
-                            , where I got hands-on experience with
-                            industry-standard software development.
-                        </H4>
-                        <H4>
-                            In addition to my co-op work, I developed my UI/UX
-                            design skills through personal projects with friends
-                            in a team called INSO. We had a blast designing and
-                            building websites for local companies in Victoria,
-                            BC. I{'\u0027'}m adaptable and resourceful, and I
-                            know when to ask for help, which makes me a good
-                            communicator and a great team player. I love working
-                            in collaborative environments and am always eager to
-                            learn and grow in the field of software engineering.
-                        </H4>
+                    <LeftContainer>
+                        <TopLeftImage src={topLeftImg} />
+                        <BottomRightImage src={bottomRightImg} />
                     </LeftContainer>
                     <RightContainer style={{ maxWidth: '500px' }}>
                         <HeaderWrapper>
-                            <H2>EDUCATION</H2> <img src={lineBlack} />
+                            <Header24 style={{ color: '#1A73E8' }}>
+                                About Me
+                            </Header24>
+                            <Header32 style={{ color: '#FFB74D' }}>
+                                Turning Ideas into Real-World Software
+                            </Header32>
                         </HeaderWrapper>
-                        <EducationContent>
-                            <H1>UNIVERSITY OF VICTORIA</H1>
-                            <H4>Bachelor of Software Engineering</H4>
-                        </EducationContent>
-                        <EducationContent>
-                            <H1>CAMOSUN COLLEGE</H1>
-                            <H4>Engineering Transfer Certificate</H4>
-                        </EducationContent>
+                        <Paragraph16 style={{ color: '#8181AA' }}>
+                            I’m a full-stack developer with a strong focus on
+                            building practical, user-focused applications. My
+                            background in software engineering helps me create
+                            systems that are not only functional, but reliable
+                            and secure.
+                            <br />
+                            <br /> I care deeply about clear design, thoughtful
+                            architecture, and writing code that solves real
+                            problems. I’ve built secure messaging apps,
+                            scheduling tools, and websites for local businesses.
+                            At{' '}
+                            <CompanyLink to='https://www.rdbrck.com/'>
+                                Redbrick
+                            </CompanyLink>
+                            , I helped develop a carbon calculator app, and at{' '}
+                            <CompanyLink to='https://assmb.ly/'>
+                                Assembly
+                            </CompanyLink>
+                            , I worked on tools for managing digital media
+                            assets. Whether I’m collaborating with a team or
+                            building something on my own, I aim to deliver work
+                            that’s both efficient and meaningful.
+                        </Paragraph16>
+
+                        <a
+                            href={ResumeDoc}
+                            download='EdraPrasetioResume'
+                            style={{ textDecoration: 'none' }}
+                        >
+                            <BlueButton
+                                style={{ width: '160px', marginTop: '8px' }}
+                            >
+                                <Header16>Download Resume</Header16>
+                            </BlueButton>
+                        </a>
                     </RightContainer>
                 </Background>
             </section>

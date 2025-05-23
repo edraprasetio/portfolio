@@ -2,68 +2,60 @@ import styled from '@emotion/styled'
 
 export const Background = styled.div`
     width: 100%;
-    color: ${(props) => props.theme.primaryColor.black[1]};
+    background-color: ${(props) => props.theme.primaryColor.white[3]};
     display: flex;
     flex-direction: row;
-    gap: 32px;
-    padding-top: 128px;
+    gap: 64px;
+    padding-top: 64px;
     padding-bottom: 64px;
     justify-content: center;
     align-items: start;
-    @media (max-width: ${(props) => props.theme.breakPoints.largePhone}) {
-        flex-direction: column;
+    @media (max-width: ${(props) => props.theme.breakPoints.miniTablet}) {
+        flex-direction: column-reverse;
         gap: 56px;
         align-items: center;
     }
 `
-export const MainWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-`
-export const ContentWrapper = styled.div`
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-`
 
 export const LeftContainer = styled.div`
-    color: ${(props) => props.theme.primaryColor.black[1]};
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+    position: relative;
+    width: 382px;
+    height: 416px;
+    padding-bottom: 72px;
+`
 
-    @media (max-width: ${(props) => props.theme.breakPoints.phone}) {
-        padding: 0px 32px;
-    }
+export const TopLeftImage = styled.img`
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    top: 0;
+    left: 0;
+`
+
+export const BottomRightImage = styled.img`
+    position: absolute;
+    bottom: 0;
+    right: 0;
 `
 
 export const HeaderWrapper = styled.div`
-    color: ${(props) => props.theme.primaryColor.black[1]};
     display: flex;
-    gap: 8px;
-    margin-bottom: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    @media (max-width: ${(props) => props.theme.breakPoints.miniTablet}) {
+        align-items: center;
+        text-align: center;
+    }
 `
 
 export const RightContainer = styled(LeftContainer)`
-    color: ${(props) => props.theme.primaryColor.black[1]};
-    gap: 20px;
-`
-
-export const AboutSocialsWrapper = styled.div`
-    display: flex;
-    flex-direction: row;
-    gap: 16px;
-`
-
-export const AboutSocials = styled.img`
-    width: 32px;
-    height: 32px;
-`
-
-export const EducationContent = styled.div`
-    color: ${(props) => props.theme.primaryColor.black[1]};
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    color: ${(props) => props.theme.primaryColor.black[1]};
+    width: 498px;
+    gap: 20px;
+    @media (max-width: ${(props) => props.theme.breakPoints.miniTablet}) {
+        align-items: center;
+    }
 `
