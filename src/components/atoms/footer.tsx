@@ -5,8 +5,11 @@ import { H1, H2, H4, Header16, Header20, Header24 } from '../../styles/typograph
 import { scrollToSection } from '../../utils'
 import { HeroSocials } from '../hero'
 import linkedInWhite from '../../assets/icons/linkedIn_white.svg'
+import linkedInOrange from '../../assets/icons/linkedIn_orange.svg'
 import gitHubWhite from '../../assets/icons/github_white.svg'
+import gitHubOrange from '../../assets/icons/github_orange.svg'
 import nameLogo from '../../assets/logos/edraPrasetioLogo1.3.png'
+import HoverIcon from './icon'
 
 const NavWrapper = styled.nav`
     box-sizing: border-box;
@@ -134,17 +137,17 @@ export function Footer() {
                     </HeaderLink>
                 </LinkWrapper>
                 <LinkWrapper>
-                    <H4>SOCIALS</H4>
+                    <Header16>SOCIALS</Header16>
                     <SocialWrapper>
                         <SimpleLink to='https://github.com/edraprasetio' target='_blank' rel='noopener noreferrer'>
-                            <HeroSocials src={gitHubWhite} />
+                            <HoverIcon src1={gitHubWhite} src2={gitHubOrange} />
                         </SimpleLink>
                         <SimpleLink
                             to='https://www.linkedin.com/in/edra-prasetio-aa22721b1/'
                             target='_blank'
                             rel='noopener noreferrer'
                         >
-                            <HeroSocials src={linkedInWhite} />
+                            <HoverIcon src1={linkedInWhite} src2={linkedInOrange} />
                         </SimpleLink>
                     </SocialWrapper>
                 </LinkWrapper>

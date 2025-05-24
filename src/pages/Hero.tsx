@@ -12,12 +12,15 @@ import {
 } from '../components/hero'
 import EdraImg from '../assets/images/edra_square.png'
 import GitHubBlack from '../assets/icons/github_blue2.svg'
+import GithubOrange from '../assets/icons/github_orange.svg'
 import LinkedInBlack from '../assets/icons/linkedIn_blue2.svg'
+import LinkedInOrange from '../assets/icons/linkedIn_orange.svg'
 import { H1, H3, Header20, Header24, Header64, Paragraph16 } from '../styles/typography'
 import { BlackButton, OrangeButton } from '../components/atoms/button'
 import { scrollToSection } from '../utils'
 import { HeaderLink, SimpleLink } from '../components/atoms/link'
 import { Typewriter } from 'react-simple-typewriter'
+import HoverIcon from '../components/atoms/icon'
 
 export function Hero() {
     return (
@@ -56,14 +59,14 @@ export function Hero() {
                     <ImageWrapper src={EdraImg} />
                     <HeroSocialsWrapper>
                         <SimpleLink to='https://github.com/edraprasetio' target='_blank' rel='noopener noreferrer'>
-                            <HeroSocials src={GitHubBlack} />
+                            <HoverIcon src1={GitHubBlack} src2={GithubOrange} />
                         </SimpleLink>
                         <SimpleLink
                             to='https://www.linkedin.com/in/edra-prasetio-aa22721b1/'
                             target='_blank'
                             rel='noopener noreferrer'
                         >
-                            <HeroSocials src={LinkedInBlack} />
+                            <HoverIcon src1={LinkedInBlack} src2={LinkedInOrange} />
                         </SimpleLink>
                     </HeroSocialsWrapper>
                 </ImageContainer>
