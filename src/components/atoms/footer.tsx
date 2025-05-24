@@ -1,18 +1,19 @@
 import styled from '@emotion/styled'
 import { HeaderLink, SimpleLink } from './link'
 
-import { H1, H2, H4 } from '../../styles/typography'
+import { H1, H2, H4, Header16, Header20, Header24 } from '../../styles/typography'
 import { scrollToSection } from '../../utils'
 import { HeroSocials } from '../hero'
 import linkedInWhite from '../../assets/icons/linkedIn_white.svg'
 import gitHubWhite from '../../assets/icons/github_white.svg'
+import nameLogo from '../../assets/logos/edraPrasetioLogo1.3.png'
 
 const NavWrapper = styled.nav`
     box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: ${(props) => props.theme.primaryColor.black[1]};
+    background-color: ${(props) => props.theme.primaryColor.blue[3]};
     color: ${(props) => props.theme.primaryColor.white[3]};
     padding: 40px 256px;
     top: 0;
@@ -39,7 +40,7 @@ const LinkWrapper = styled.div`
 const RightWrapper = styled.div`
     display: flex;
     flex-direction: row;
-    gap: 32px;
+    gap: 64px;
     @media (max-width: ${(props) => props.theme.breakPoints.largePhone}) {
         flex-direction: column;
         text-align: center;
@@ -64,10 +65,34 @@ const AddressWrapper = styled.div`
     }
 `
 
-const FooterLink = styled(HeaderLink)`
+const FooterLink = styled.div`
+    position: relative;
+    display: inline-block;
     color: ${(props) => props.theme.primaryColor.white[1]};
-    &:hover {
-        color: ${(props) => props.theme.primaryColor.blue[2]};
+    text-decoration: none;
+    text-transform: unset;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0%;
+        height: 2px;
+        background-color: ${(props) => props.theme.primaryColor.white[1]};
+        transition: width 0.3s ease;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+
+    &:active {
+        color: ${(props) => props.theme.primaryColor.orange[1]};
+    }
+
+    &:active::after {
+        background-color: ${(props) => props.theme.primaryColor.orange[1]};
     }
 `
 
@@ -75,30 +100,38 @@ export function Footer() {
     return (
         <NavWrapper>
             <AddressWrapper>
-                <FooterLink to='/' onClick={() => scrollToSection('hero')}>
-                    <H2>Edra Prasetio</H2>
-                </FooterLink>
-                <H1 style={{ fontSize: '14px' }}>VICTORIA, BC</H1>
-                <H1 style={{ fontSize: '14px' }}>CANADA</H1>
+                <HeaderLink to='/' onClick={() => scrollToSection('hero')}>
+                    <img src={nameLogo} style={{ width: '80px' }} />
+                </HeaderLink>
+                <Header16 style={{ fontSize: '14px' }}>VICTORIA, BC</Header16>
+                <Header16 style={{ fontSize: '14px' }}>CANADA</Header16>
             </AddressWrapper>
 
             <RightWrapper>
                 <LinkWrapper>
-                    <FooterLink to='#about' onClick={() => scrollToSection('about')}>
-                        <H4>About</H4>
-                    </FooterLink>
+                    <HeaderLink to='/' onClick={() => scrollToSection('hero')}>
+                        <FooterLink>
+                            <Header16>Home</Header16>
+                        </FooterLink>
+                    </HeaderLink>
 
-                    <FooterLink to='#skills' onClick={() => scrollToSection('skills')}>
-                        <H4>Skills</H4>
-                    </FooterLink>
+                    <HeaderLink to='#about' onClick={() => scrollToSection('about')}>
+                        <FooterLink>
+                            <Header16>About</Header16>
+                        </FooterLink>
+                    </HeaderLink>
 
-                    <FooterLink to='#experience' onClick={() => scrollToSection('experience')}>
-                        <H4>Experience</H4>
-                    </FooterLink>
+                    <HeaderLink to='#projects' onClick={() => scrollToSection('projects')}>
+                        <FooterLink>
+                            <Header16>Projects</Header16>
+                        </FooterLink>
+                    </HeaderLink>
 
-                    <FooterLink to='#contact' onClick={() => scrollToSection('contact')}>
-                        <H4>Contact</H4>
-                    </FooterLink>
+                    <HeaderLink to='#contact' onClick={() => scrollToSection('contact')}>
+                        <FooterLink>
+                            <Header16>Contact</Header16>
+                        </FooterLink>
+                    </HeaderLink>
                 </LinkWrapper>
                 <LinkWrapper>
                     <H4>SOCIALS</H4>

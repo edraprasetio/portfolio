@@ -64,7 +64,6 @@ export function Contact() {
         e.preventDefault()
         if (validateForm() && form.current) {
             console.log('Form Ref: ', form.current)
-            // handle form submission (e.g., send to backend or email service)
             sendForm('service_0epz1w4', 'template_1ctunrd', form.current, { publicKey: 'rul32lvZ8PxCEuQju' })
                 .then(() => {
                     setShowMessage(true)

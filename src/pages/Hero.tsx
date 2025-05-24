@@ -46,7 +46,7 @@ export function Hero() {
                     </HeroNameHeader>
 
                     <HeaderLink to='#contact' onClick={() => scrollToSection('contact')}>
-                        <OrangeButton style={{ width: '146px' }}>
+                        <OrangeButton style={{ width: '200px' }}>
                             <Header20>Let{'\u0027'}s Chat</Header20>
                         </OrangeButton>
                     </HeaderLink>

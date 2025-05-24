@@ -128,7 +128,6 @@ export function NavBar() {
                         <H1>About</H1>
                     </NavButton>
                 </HeaderLink>
-
                 <HeaderLink to='#skills' onClick={() => handleMenuClick('skills')}>
                     <ClearButton>
                         <H1>Skills</H1>
