@@ -93,6 +93,11 @@ export const ProjectCard = styled.div`
         width: 360px;
         height: unset;
     }
+
+    @media (max-width: ${(props) => props.theme.breakPoints.phone}) {
+        width: unset;
+        margin: 0px 16px;
+    }
 `
 
 export const CardContainer = styled.div`

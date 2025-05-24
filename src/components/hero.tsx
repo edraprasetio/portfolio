@@ -40,6 +40,7 @@ export const HeroNameHeader = styled(HeroHeader)`
         justify-content: center;
         align-items: center;
         text-align: center;
+        margin: 0 16px;
     }
 `
 

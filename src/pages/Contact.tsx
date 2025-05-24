@@ -109,6 +109,7 @@ export function Contact() {
                             onChange={handleChange}
                             status={errors.message ? 'error' : ''}
                             message={errors.message}
+                            style={{ resize: 'vertical', overflow: 'auto' }}
                         />
                         <BlueButton type='submit' style={{ marginTop: '8px' }}>
                             <Header16>Send Message</Header16>
