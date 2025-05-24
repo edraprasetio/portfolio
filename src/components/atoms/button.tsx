@@ -87,7 +87,7 @@ export const NavButton = styled.div`
     }
 `
 
-export const OrangeButton = styled.div`
+export const OrangeButton = styled.button`
     display: flex;
     padding: 8px 32px;
     border-radius: 36px;
@@ -97,8 +97,7 @@ export const OrangeButton = styled.div`
     background-color: ${(props) => props.theme.primaryColor.orange[1]};
     color: ${(props) => props.theme.primaryColor.white[1]};
 
-    transition: background-color 0.3s ease, border-color 0.3s ease,
-        color 0.3s ease;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
     &:hover {
         border: 3px solid ${(props) => props.theme.primaryColor.blue[3]};
         background-color: ${(props) => props.theme.primaryColor.blue[3]};

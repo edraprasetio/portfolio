@@ -41,11 +41,9 @@ export function Experience() {
                                     Developer Co-Op
                                 </H1>
                                 <H4>
-                                    Developed full stack applications for 10+
-                                    assets using React and MySQL. Deployed
-                                    projects on AWS and wrote regression test
-                                    suites with Jest to ensure code quality and
-                                    reliability.
+                                    Developed full stack applications for 10+ assets using React and MySQL. Deployed
+                                    projects on AWS and wrote regression test suites with Jest to ensure code quality
+                                    and reliability.
                                 </H4>
                             </CardDescription>
                         </Card>
@@ -64,10 +62,8 @@ export function Experience() {
                                     IT Co-Op
                                 </H1>
                                 <H4>
-                                    Developed a data collection web application
-                                    using the R Shiny library. Implemented data
-                                    filtering and manipulation features to
-                                    generate comprehensive reports.
+                                    Developed a data collection web application using the R Shiny library. Implemented
+                                    data filtering and manipulation features to generate comprehensive reports.
                                 </H4>
                             </CardDescription>
                         </Card>
@@ -88,11 +84,9 @@ export function Experience() {
                                     Full-Stack Developer Co-Op
                                 </H1>
                                 <H4>
-                                    In partnership with Redbrick, collaborated
-                                    with a team of computer science students on
-                                    full stack development using React and
-                                    Django. Developed an application that tracks
-                                    the carbon footprint of web browsing.
+                                    In partnership with Redbrick, collaborated with a team of computer science students
+                                    on full stack development using React and Django. Developed an application that
+                                    tracks the carbon footprint of web browsing.
                                 </H4>
                             </CardDescription>
                         </Card>
@@ -111,10 +105,8 @@ export function Experience() {
                                     Apprentice Garage Member Co-Op
                                 </H1>
                                 <H4>
-                                    Managed Inspire{'\u0027'}s website using
-                                    Squarespace. Edited footage for Inspire
-                                    {'\u0027'}s podcast and conference videos
-                                    for social media.
+                                    Managed Inspire{'\u0027'}s website using Squarespace. Edited footage for Inspire
+                                    {'\u0027'}s podcast and conference videos for social media.
                                 </H4>
                             </CardDescription>
                         </Card>

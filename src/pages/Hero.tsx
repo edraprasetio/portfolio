@@ -13,14 +13,7 @@ import {
 import EdraImg from '../assets/images/edra_square.png'
 import GitHubBlack from '../assets/icons/github_blue2.svg'
 import LinkedInBlack from '../assets/icons/linkedIn_blue2.svg'
-import {
-    H1,
-    H3,
-    Header20,
-    Header24,
-    Header64,
-    Paragraph16,
-} from '../styles/typography'
+import { H1, H3, Header20, Header24, Header64, Paragraph16 } from '../styles/typography'
 import { BlackButton, OrangeButton } from '../components/atoms/button'
 import { scrollToSection } from '../utils'
 import { HeaderLink, SimpleLink } from '../components/atoms/link'
@@ -32,9 +25,7 @@ export function Hero() {
             <Background>
                 <HeroMainHeader>
                     <HeroNameHeader>
-                        <Header24 style={{ color: '#FFB74D' }}>
-                            Hello, I Am
-                        </Header24>
+                        <Header24 style={{ color: '#FFB74D' }}>Hello, I Am</Header24>
                         <Header64 style={{ color: '#1a73e8' }}>
                             <Typewriter
                                 words={['Edra Prasetio']}
@@ -50,15 +41,11 @@ export function Hero() {
 
                     <HeroNameHeader>
                         <Paragraph16 style={{ color: '#8181AA' }}>
-                            Currently building secure, scalable apps - and
-                            always learning more
+                            Currently building secure, scalable apps - and always learning more
                         </Paragraph16>
                     </HeroNameHeader>
 
-                    <HeaderLink
-                        to='#contact'
-                        onClick={() => scrollToSection('contact')}
-                    >
+                    <HeaderLink to='#contact' onClick={() => scrollToSection('contact')}>
                         <OrangeButton style={{ width: '146px' }}>
                             <Header20>Let{'\u0027'}s Chat</Header20>
                         </OrangeButton>
@@ -68,11 +55,7 @@ export function Hero() {
                 <ImageContainer>
                     <ImageWrapper src={EdraImg} />
                     <HeroSocialsWrapper>
-                        <SimpleLink
-                            to='https://github.com/edraprasetio'
-                            target='_blank'
-                            rel='noopener noreferrer'
-                        >
+                        <SimpleLink to='https://github.com/edraprasetio' target='_blank' rel='noopener noreferrer'>
                             <HeroSocials src={GitHubBlack} />
                         </SimpleLink>
                         <SimpleLink

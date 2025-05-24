@@ -15,12 +15,7 @@ interface FilterComponentProps {
     items: Item[]
 }
 
-const categories = [
-    'All',
-    'Programming Languages',
-    'Development Tools',
-    'Databases',
-]
+const categories = ['All', 'Programming Languages', 'Development Tools', 'Databases']
 
 export const FilterComponent: React.FC<FilterComponentProps> = ({ items }) => {
     const [selectedCategory, setSelectedCategory] = useState<string>('All')
@@ -29,13 +24,9 @@ export const FilterComponent: React.FC<FilterComponentProps> = ({ items }) => {
 
     useEffect(() => {
         const filteredItems =
-            selectedCategory === 'All'
-                ? items
-                : items.filter((item) => item.category === selectedCategory)
+            selectedCategory === 'All' ? items : items.filter((item) => item.category === selectedCategory)
 
-        const itemsToFadeOut = displayedItems.filter(
-            (item) => !filteredItems.includes(item)
-        )
+        const itemsToFadeOut = displayedItems.filter((item) => !filteredItems.includes(item))
 
         setItemsToRemove(new Set(itemsToFadeOut.map((item) => item.id)))
 
@@ -66,18 +57,11 @@ export const FilterComponent: React.FC<FilterComponentProps> = ({ items }) => {
             </CategoryContainer>
             <ItemList>
                 {displayedItems.map((item) => (
-                    <Item
-                        key={item.id}
-                        className={
-                            itemsToRemove.has(item.id) ? 'fade-out' : 'fade-in'
-                        }
-                    >
+                    <Item key={item.id} className={itemsToRemove.has(item.id) ? 'fade-out' : 'fade-in'}>
                         <ItemImage src={item.imageUrl} alt={item.name} />
                         <ItemInfo>
                             <H1 style={{ fontWeight: 'bold' }}>{item.name}</H1>
-                            <H4 style={{ color: '#666464' }}>
-                                {item.yearsOfExperience}+ Years of Experience
-                            </H4>
+                            <H4 style={{ color: '#666464' }}>{item.yearsOfExperience}+ Years of Experience</H4>
                         </ItemInfo>
                     </Item>
                 ))}
@@ -108,13 +92,8 @@ const CategoryContainer = styled.div`
 
 const CategoryButton = styled.button<{ isSelected: boolean }>`
     background-color: ${(props) =>
-        props.isSelected
-            ? props.theme.primaryColor.white[1]
-            : props.theme.primaryColor.black[1]};
-    color: ${(props) =>
-        props.isSelected
-            ? props.theme.primaryColor.black[1]
-            : props.theme.primaryColor.white[1]};
+        props.isSelected ? props.theme.primaryColor.white[1] : props.theme.primaryColor.black[1]};
+    color: ${(props) => (props.isSelected ? props.theme.primaryColor.black[1] : props.theme.primaryColor.white[1])};
     border: none;
     border-radius: 36px;
     padding: 8px 24px;
@@ -128,20 +107,13 @@ const CategoryButton = styled.button<{ isSelected: boolean }>`
 
     &:hover {
         background-color: ${(props) =>
-            props.isSelected
-                ? props.theme.primaryColor.white[3]
-                : props.theme.primaryColor.grey[1]};
+            props.isSelected ? props.theme.primaryColor.white[3] : props.theme.primaryColor.grey[1]};
     }
 
     &:active {
         background-color: ${(props) =>
-            props.isSelected
-                ? props.theme.primaryColor.black[1]
-                : props.theme.primaryColor.white[1]};
-        color: ${(props) =>
-            props.isSelected
-                ? props.theme.primaryColor.white[1]
-                : props.theme.primaryColor.black[1]};
+            props.isSelected ? props.theme.primaryColor.black[1] : props.theme.primaryColor.white[1]};
+        color: ${(props) => (props.isSelected ? props.theme.primaryColor.white[1] : props.theme.primaryColor.black[1])};
     }
 
     @media (max-width: ${(props) => props.theme.breakPoints.phone}) {

@@ -80,8 +80,7 @@ export const ProjectCard = styled.div`
 
     &:hover {
         border: 2px solid #a6d4ff; /* Light blue */
-        box-shadow: 0 6px 12px 0 rgba(0, 155, 255, 0.2),
-            0 8px 24px 0 rgba(0, 155, 255, 0.2);
+        box-shadow: 0 6px 12px 0 rgba(0, 155, 255, 0.2), 0 8px 24px 0 rgba(0, 155, 255, 0.2);
     }
 `
 
@@ -134,10 +133,7 @@ interface ProjectLinkWithHoverProps {
     label: string
 }
 
-export const ProjectLinkWithHover = ({
-    to,
-    label,
-}: ProjectLinkWithHoverProps) => {
+export const ProjectLinkWithHover = ({ to, label }: ProjectLinkWithHoverProps) => {
     const [isHovered, setIsHovered] = useState(false)
     return (
         <ProjectLink

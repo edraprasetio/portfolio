@@ -6,16 +6,7 @@ import {
     RightContainer,
     TopLeftImage,
 } from '../components/about'
-import {
-    H1,
-    H2,
-    H4,
-    Header16,
-    Header24,
-    Header32,
-    Header40,
-    Paragraph16,
-} from '../styles/typography'
+import { Header16, Header24, Header32, Paragraph16 } from '../styles/typography'
 import { SimpleLink } from '../components/atoms/link'
 import styled from '@emotion/styled'
 import { BlueButton, OrangeButton } from '../components/atoms/button'
@@ -46,46 +37,25 @@ export function About() {
                     </LeftContainer>
                     <RightContainer style={{ maxWidth: '500px' }}>
                         <HeaderWrapper>
-                            <Header24 style={{ color: '#1A73E8' }}>
-                                About Me
-                            </Header24>
-                            <Header32 style={{ color: '#FFB74D' }}>
-                                Turning Ideas into Real-World Software
-                            </Header32>
+                            <Header24 style={{ color: '#1A73E8' }}>About Me</Header24>
+                            <Header32 style={{ color: '#FFB74D' }}>Turning Ideas into Real-World Software</Header32>
                         </HeaderWrapper>
                         <Paragraph16 style={{ color: '#8181AA' }}>
-                            I’m a full-stack developer with a strong focus on
-                            building practical, user-focused applications. My
-                            background in software engineering helps me create
-                            systems that are not only functional, but reliable
-                            and secure.
+                            I’m a full-stack developer with a strong focus on building practical, user-focused
+                            applications. My background in software engineering helps me create systems that are not
+                            only functional, but reliable and secure.
                             <br />
-                            <br /> I care deeply about clear design, thoughtful
-                            architecture, and writing code that solves real
-                            problems. I’ve built secure messaging apps,
-                            scheduling tools, and websites for local businesses.
-                            At{' '}
-                            <CompanyLink to='https://www.rdbrck.com/'>
-                                Redbrick
-                            </CompanyLink>
-                            , I helped develop a carbon calculator app, and at{' '}
-                            <CompanyLink to='https://assmb.ly/'>
-                                Assembly
-                            </CompanyLink>
-                            , I worked on tools for managing digital media
-                            assets. Whether I’m collaborating with a team or
-                            building something on my own, I aim to deliver work
-                            that’s both efficient and meaningful.
+                            <br /> I care deeply about clear design, thoughtful architecture, and writing code that
+                            solves real problems. I’ve built secure messaging apps, scheduling tools, and websites for
+                            local businesses. At <CompanyLink to='https://www.rdbrck.com/'>Redbrick</CompanyLink>, I
+                            helped develop a carbon calculator app, and at{' '}
+                            <CompanyLink to='https://assmb.ly/'>Assembly</CompanyLink>, I worked on tools for managing
+                            digital media assets. Whether I’m collaborating with a team or building something on my own,
+                            I aim to deliver work that’s both efficient and meaningful.
                         </Paragraph16>
 
-                        <a
-                            href={ResumeDoc}
-                            download='EdraPrasetioResume'
-                            style={{ textDecoration: 'none' }}
-                        >
-                            <BlueButton
-                                style={{ width: '160px', marginTop: '8px' }}
-                            >
+                        <a href={ResumeDoc} download='EdraPrasetioResume' style={{ textDecoration: 'none' }}>
+                            <BlueButton style={{ width: '240px', marginTop: '8px' }}>
                                 <Header16>Download Resume</Header16>
                             </BlueButton>
                         </a>

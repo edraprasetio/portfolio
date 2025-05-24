@@ -123,27 +123,18 @@ export function NavBar() {
     if (showMenu) {
         menu = (
             <OpenMenu>
-                <HeaderLink
-                    to='#about'
-                    onClick={() => handleMenuClick('about')}
-                >
+                <HeaderLink to='#about' onClick={() => handleMenuClick('about')}>
                     <NavButton>
                         <H1>About</H1>
                     </NavButton>
                 </HeaderLink>
 
-                <HeaderLink
-                    to='#skills'
-                    onClick={() => handleMenuClick('skills')}
-                >
+                <HeaderLink to='#skills' onClick={() => handleMenuClick('skills')}>
                     <ClearButton>
                         <H1>Skills</H1>
                     </ClearButton>
                 </HeaderLink>
-                <HeaderLink
-                    to='#contact'
-                    onClick={() => handleMenuClick('contact')}
-                >
+                <HeaderLink to='#contact' onClick={() => handleMenuClick('contact')}>
                     <ClearButton>
                         <H1>Contact</H1>
                     </ClearButton>
@@ -164,37 +155,25 @@ export function NavBar() {
                             <Header20>Home</Header20>
                         </NavButton>
                     </HeaderLink>
-                    <HeaderLink
-                        to='#projects'
-                        onClick={() => scrollToSection('projects')}
-                    >
+                    <HeaderLink to='#projects' onClick={() => scrollToSection('projects')}>
                         <NavButton>
                             <Header20>Projects</Header20>
                         </NavButton>
                     </HeaderLink>
 
-                    <HeaderLink
-                        to='#about'
-                        onClick={() => scrollToSection('about')}
-                    >
+                    <HeaderLink to='#about' onClick={() => scrollToSection('about')}>
                         <NavButton>
                             <Header20>About</Header20>
                         </NavButton>
                     </HeaderLink>
 
-                    <HeaderLink
-                        to='#contact'
-                        onClick={() => scrollToSection('contact')}
-                    >
+                    <HeaderLink to='#contact' onClick={() => scrollToSection('contact')}>
                         <OrangeButton>
                             <Header20>Contact</Header20>
                         </OrangeButton>
                     </HeaderLink>
                 </LinkWrapper>
-                <StyledMenuIcon
-                    src={showMenu ? closeIcon : menuIcon}
-                    onClick={() => setShowMenu(!showMenu)}
-                />
+                <StyledMenuIcon src={showMenu ? closeIcon : menuIcon} onClick={() => setShowMenu(!showMenu)} />
             </NavWrapper>
             {menu}
         </StickyContainer>

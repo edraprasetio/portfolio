@@ -26,10 +26,8 @@ export function Work() {
                     <Description>
                         <H1>Software Developer @ Assembly Digital Media</H1>
                         <H4>
-                            Developed full stack applications for 10+ assets
-                            using React and MySQL. Deployed projects on AWS and
-                            wrote regression test suites with Jest to ensure
-                            code quality and reliability.
+                            Developed full stack applications for 10+ assets using React and MySQL. Deployed projects on
+                            AWS and wrote regression test suites with Jest to ensure code quality and reliability.
                         </H4>
                         <SkillsContainer>
                             <SkillsSection>
@@ -55,10 +53,7 @@ export function Work() {
                     <H1>Sep 2022 - Jan 2024</H1>
                     <Description>
                         <H1>Co-Founder @ INSO Systems</H1>
-                        <H4>
-                            Developed websites for local businesses in British
-                            Columbia using React and Typescript.
-                        </H4>
+                        <H4>Developed websites for local businesses in British Columbia using React and Typescript.</H4>
                         <SkillsContainer>
                             <SkillsSection>
                                 <Skill>
@@ -76,9 +71,8 @@ export function Work() {
                     <Description>
                         <H1>IT & Software Developer @ LGL Limited</H1>
                         <H4>
-                            Developed data collection web application using R
-                            Shiny Library. Implemented data filtering and
-                            manipulation to generate reports.
+                            Developed data collection web application using R Shiny Library. Implemented data filtering
+                            and manipulation to generate reports.
                         </H4>
                         <SkillsContainer>
                             <SkillsSection>
@@ -97,8 +91,7 @@ export function Work() {
                     <Description>
                         <H1>IT @ Inspire: STEM for Social Impact</H1>
                         <H4>
-                            Managed Inspire{'\u0027'}s website using
-                            Squarespace. Edited footage for Inspire{'\u0027'}s
+                            Managed Inspire{'\u0027'}s website using Squarespace. Edited footage for Inspire{'\u0027'}s
                             podcast and conference videos for social media.
                         </H4>
                         <SkillsContainer>
@@ -118,10 +111,8 @@ export function Work() {
                     <Description>
                         <H1>Full-Stack Developer @ Redbrick</H1>
                         <H4>
-                            Collaborated with a team of computer science
-                            students on full-stack development using React and
-                            Django. Developed an application that tracks the
-                            carbon footprint of web browsing.
+                            Collaborated with a team of computer science students on full-stack development using React
+                            and Django. Developed an application that tracks the carbon footprint of web browsing.
                         </H4>
                         <SkillsContainer>
                             <SkillsSection>

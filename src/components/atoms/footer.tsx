@@ -84,42 +84,26 @@ export function Footer() {
 
             <RightWrapper>
                 <LinkWrapper>
-                    <FooterLink
-                        to='#about'
-                        onClick={() => scrollToSection('about')}
-                    >
+                    <FooterLink to='#about' onClick={() => scrollToSection('about')}>
                         <H4>About</H4>
                     </FooterLink>
 
-                    <FooterLink
-                        to='#skills'
-                        onClick={() => scrollToSection('skills')}
-                    >
+                    <FooterLink to='#skills' onClick={() => scrollToSection('skills')}>
                         <H4>Skills</H4>
                     </FooterLink>
 
-                    <FooterLink
-                        to='#experience'
-                        onClick={() => scrollToSection('experience')}
-                    >
+                    <FooterLink to='#experience' onClick={() => scrollToSection('experience')}>
                         <H4>Experience</H4>
                     </FooterLink>
 
-                    <FooterLink
-                        to='#contact'
-                        onClick={() => scrollToSection('contact')}
-                    >
+                    <FooterLink to='#contact' onClick={() => scrollToSection('contact')}>
                         <H4>Contact</H4>
                     </FooterLink>
                 </LinkWrapper>
                 <LinkWrapper>
                     <H4>SOCIALS</H4>
                     <SocialWrapper>
-                        <SimpleLink
-                            to='https://github.com/edraprasetio'
-                            target='_blank'
-                            rel='noopener noreferrer'
-                        >
+                        <SimpleLink to='https://github.com/edraprasetio' target='_blank' rel='noopener noreferrer'>
                             <HeroSocials src={gitHubWhite} />
                         </SimpleLink>
                         <SimpleLink
