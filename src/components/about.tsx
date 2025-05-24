@@ -15,6 +15,12 @@ export const Background = styled.div`
         gap: 56px;
         align-items: center;
     }
+
+    @media (max-width: ${(props) => props.theme.breakPoints.largePhone}) {
+        flex-direction: column-reverse;
+        gap: 80px;
+        align-items: center;
+    }
 `
 
 export const LeftContainer = styled.div`
@@ -22,6 +28,9 @@ export const LeftContainer = styled.div`
     width: 382px;
     height: 416px;
     padding-bottom: 72px;
+    @media (max-width: ${(props) => props.theme.breakPoints.largePhone}) {
+        padding-bottom: 160px;
+    }
 `
 
 export const TopLeftImage = styled.img`
@@ -57,5 +66,9 @@ export const RightContainer = styled(LeftContainer)`
     gap: 20px;
     @media (max-width: ${(props) => props.theme.breakPoints.miniTablet}) {
         align-items: center;
+    }
+    @media (max-width: ${(props) => props.theme.breakPoints.largePhone}) {
+        width: unset;
+        margin: 0px 16px;
     }
 `

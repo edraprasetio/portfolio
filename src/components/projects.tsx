@@ -21,6 +21,12 @@ export const HeaderWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 12px;
+    @media (max-width: ${(props) => props.theme.breakPoints.miniTablet}) {
+        width: 360px;
+        height: unset;
+        margin: 0px 8px;
+        text-align: center;
+    }
 `
 
 export const ImageContainer = styled.img`
@@ -82,6 +88,11 @@ export const ProjectCard = styled.div`
         border: 2px solid #a6d4ff; /* Light blue */
         box-shadow: 0 6px 12px 0 rgba(0, 155, 255, 0.2), 0 8px 24px 0 rgba(0, 155, 255, 0.2);
     }
+
+    @media (max-width: ${(props) => props.theme.breakPoints.miniTablet}) {
+        width: 360px;
+        height: unset;
+    }
 `
 
 export const CardContainer = styled.div`
@@ -105,6 +116,7 @@ export const DescriptionWrapper = styled.div`
 
 export const BubbleWrapper = styled.div`
     display: flex;
+    flex-wrap: wrap;
     gap: 8px;
 `
 

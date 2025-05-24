@@ -4,8 +4,8 @@ import { HeaderLink } from './link'
 import { useEffect, useState } from 'react'
 import { H1, H2, Header16, Header20 } from '../../styles/typography'
 import { scrollToSection } from '../../utils'
-import closeIcon from '../../assets/icons/menuClose.svg'
-import menuIcon from '../../assets/icons/menuOpen.svg'
+import closeIcon from '../../assets/icons/menuCloseBlue.svg'
+import menuIcon from '../../assets/icons/menuOpenBlue.svg'
 import nameLogo from '../../assets/logos/edraPrasetioLogo1.2.png'
 
 // Container that makes all of it's contents stick to the top of the viewport
@@ -74,12 +74,12 @@ const OpenMenu = styled.div`
     background-color: ${(props) => props.theme.primaryColor.white[2]};
     flex-direction: column;
     align-items: center;
-    z-index: 10;
-    height: 90vh;
-    gap: 32px;
+    z-index: 5;
+    height: 100vh;
+    gap: 64px;
     width: 100%;
     align-items: center;
-    padding-top: 128px;
+    padding-top: 256px;
     overflow-y: hidden;
     @media (min-width: ${(props) => props.theme.breakPoints.miniTablet}) {
         display: none;
@@ -95,6 +95,30 @@ export function NavBar() {
     let menu
     const [hasShadow, setHasShadow] = useState(false)
     const [showMenu, setShowMenu] = useState(false)
+
+    useEffect(() => {
+        const setVh = () => {
+            const vh = window.innerHeight * 0.01
+            document.documentElement.style.setProperty('--vh', `${vh}px`)
+        }
+
+        setVh()
+        window.addEventListener('resize', setVh)
+        return () => window.removeEventListener('resize', setVh)
+    }, [])
+
+    useEffect(() => {
+        if (showMenu) {
+            document.body.style.overflow = 'hidden'
+        } else {
+            document.body.style.overflow = 'auto'
+        }
+
+        // Clean up if component unmounts
+        return () => {
+            document.body.style.overflow = 'auto'
+        }
+    }, [showMenu])
 
     useEffect(() => {
         const handleScroll = () => {
@@ -123,20 +147,25 @@ export function NavBar() {
     if (showMenu) {
         menu = (
             <OpenMenu>
-                <HeaderLink to='#about' onClick={() => handleMenuClick('about')}>
+                <HeaderLink to='/' onClick={() => handleMenuClick('hero')}>
                     <NavButton>
-                        <H1>About</H1>
+                        <Header20>Home</Header20>
                     </NavButton>
                 </HeaderLink>
-                <HeaderLink to='#skills' onClick={() => handleMenuClick('skills')}>
-                    <ClearButton>
-                        <H1>Skills</H1>
-                    </ClearButton>
+                <HeaderLink to='#projects' onClick={() => handleMenuClick('projects')}>
+                    <NavButton>
+                        <Header20>Projects</Header20>
+                    </NavButton>
+                </HeaderLink>
+                <HeaderLink to='#about' onClick={() => handleMenuClick('about')}>
+                    <NavButton>
+                        <Header20>About</Header20>
+                    </NavButton>
                 </HeaderLink>
                 <HeaderLink to='#contact' onClick={() => handleMenuClick('contact')}>
-                    <ClearButton>
-                        <H1>Contact</H1>
-                    </ClearButton>
+                    <NavButton>
+                        <Header20>Contact</Header20>
+                    </NavButton>
                 </HeaderLink>
             </OpenMenu>
         )

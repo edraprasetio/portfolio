@@ -49,6 +49,9 @@ export const Card = styled.div`
     gap: 32px;
 
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    @media (max-width: ${(props) => props.theme.breakPoints.largePhone}) {
+        margin: 0px 16px;
+    }
 `
 
 export const FormContainer = styled.form`

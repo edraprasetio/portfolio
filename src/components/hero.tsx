@@ -15,6 +15,9 @@ export const Background = styled.div`
         gap: 56px;
         padding-bottom: 96px;
     }
+    @media (max-width: ${(props) => props.theme.breakPoints.miniTablet}) {
+        padding-bottom: 96px;
+    }
 `
 
 const HeroHeader = styled.div`
@@ -36,6 +39,7 @@ export const HeroNameHeader = styled(HeroHeader)`
     @media (max-width: ${(props) => props.theme.breakPoints.miniTablet}) {
         justify-content: center;
         align-items: center;
+        text-align: center;
     }
 `
 
