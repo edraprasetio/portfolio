@@ -43,6 +43,9 @@ export const TopLeftImage = styled.img`
 
 export const BottomRightImage = styled.img`
     position: absolute;
+    width: 240px;
+    height: 240px;
+    border-radius: 360px;
     bottom: 0;
     right: 0;
 `

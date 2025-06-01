@@ -12,7 +12,7 @@ import styled from '@emotion/styled'
 import { BlueButton, OrangeButton } from '../components/atoms/button'
 import ResumeDoc from '../assets/files/Resume_EdraPrasetio.pdf'
 import topLeftImg from '../assets/images/topLeftImgLarge.svg'
-import bottomRightImg from '../assets/images/bottomRightImg.svg'
+import bottomRightImg from '../assets/images/hopspan_screenshot1.1.png'
 
 const CompanyLink = styled(SimpleLink)`
     color: ${(props) => props.theme.primaryColor.blue[3]};

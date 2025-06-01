@@ -16,6 +16,7 @@ import project1 from '../assets/logos/project1_logo.svg'
 import project2 from '../assets/logos/project2_logo.svg'
 import project3 from '../assets/logos/project3_logo.svg'
 import project4 from '../assets/logos/project4_logo.svg'
+import project5 from '../assets/logos/project5_logo.svg'
 
 export function Projects() {
     return (
@@ -85,6 +86,34 @@ export function Projects() {
                                 />
                             </DescriptionWrapper>
                         </ProjectCard>
+                        <ProjectCard>
+                            <LogoWrapper src={project4} />
+                            <DescriptionWrapper>
+                                <Header24>Capstone Scheduler App</Header24>
+                                <Paragraph16 style={{ color: '#8181AA' }}>
+                                    Led a team of frontend developers to build a scheduling app that helps professors
+                                    request and manage their preferred teaching schedules each semester.
+                                </Paragraph16>
+                                <BubbleWrapper>
+                                    <Bubble>
+                                        <Paragraph14>React</Paragraph14>
+                                    </Bubble>
+                                    <Bubble>
+                                        <Paragraph14>Go</Paragraph14>
+                                    </Bubble>
+                                    <Bubble>
+                                        <Paragraph14>Python</Paragraph14>
+                                    </Bubble>
+                                    <Bubble>
+                                        <Paragraph14>MongoDB</Paragraph14>
+                                    </Bubble>
+                                </BubbleWrapper>
+                                <ProjectLinkWithHover
+                                    to='https://github.com/SENG-499-Company2-B01/Frontend'
+                                    label='Source Code'
+                                />
+                            </DescriptionWrapper>
+                        </ProjectCard>
                     </div>
                     <div
                         style={{
@@ -117,29 +146,23 @@ export function Projects() {
                         </ProjectCard>
 
                         <ProjectCard>
-                            <LogoWrapper src={project4} />
+                            <LogoWrapper src={project5} />
                             <DescriptionWrapper>
-                                <Header24>Capstone Scheduler App</Header24>
+                                <Header24>HopSpan</Header24>
                                 <Paragraph16 style={{ color: '#8181AA' }}>
-                                    Led a team of frontend developers to build a scheduling app that helps professors
-                                    request and manage their preferred teaching schedules each semester.
+                                    Full-stack web app using React and Node.js to map a website’s server location and
+                                    analyze its load size.
                                 </Paragraph16>
                                 <BubbleWrapper>
                                     <Bubble>
                                         <Paragraph14>React</Paragraph14>
                                     </Bubble>
                                     <Bubble>
-                                        <Paragraph14>Go</Paragraph14>
-                                    </Bubble>
-                                    <Bubble>
-                                        <Paragraph14>Python</Paragraph14>
-                                    </Bubble>
-                                    <Bubble>
-                                        <Paragraph14>MongoDB</Paragraph14>
+                                        <Paragraph14>Node.js</Paragraph14>
                                     </Bubble>
                                 </BubbleWrapper>
                                 <ProjectLinkWithHover
-                                    to='https://github.com/SENG-499-Company2-B01/Frontend'
+                                    to='https://github.com/edraprasetio/hopspan'
                                     label='Source Code'
                                 />
                             </DescriptionWrapper>
