@@ -40,7 +40,7 @@ export function About() {
                             <Header24 style={{ color: '#1A73E8' }}>About Me</Header24>
                             <Header32 style={{ color: '#FFB74D' }}>Turning Ideas into Real-World Software</Header32>
                         </HeaderWrapper>
-                        <Paragraph16 style={{ color: '#8181AA' }}>
+                        <Paragraph16 style={{ color: '#8181AA', lineHeight: '1.8' }}>
                             I’m a full-stack developer with a strong focus on building practical, user-focused
                             applications. My background in software engineering helps me create systems that are not
                             only functional, but reliable and secure.

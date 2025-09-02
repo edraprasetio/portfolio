@@ -27,9 +27,9 @@ export const LeftContainer = styled.div`
     position: relative;
     width: 382px;
     height: 416px;
-    padding-bottom: 72px;
+    padding-bottom: 168px;
     @media (max-width: ${(props) => props.theme.breakPoints.largePhone}) {
-        padding-bottom: 160px;
+        padding-bottom: 240px;
     }
 `
 
